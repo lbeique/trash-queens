@@ -1,10 +1,10 @@
 <script setup>
-import GameButton from '../components/GameButton.vue'
+import Button from '../components/GameButton.vue'
 </script>
 
 <template>
   <main>
-    <GameButton text="Start Game" @click="startGame" />
+    <Button text="Start Game" variant="primary" @click="startGame" />
   </main>
 </template>
 

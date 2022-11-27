@@ -23,7 +23,8 @@ export default {
 .navbar {
     display: flex;
     justify-content: space-evenly;
-    position:sticky;
+    position: fixed;
+    width: 100%;
     background-color: #5AB4AB;
     padding: 1rem 0;
     bottom: 0;

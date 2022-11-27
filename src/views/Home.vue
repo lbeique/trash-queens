@@ -1,11 +1,13 @@
 <script setup>
-import GameButton from '../components/shared/GameButton.vue'
+import Button from '../components/shared/Button.vue'
 
 </script>
 
 <template>
   <div class="center">
-    <GameButton text="Sandbox" @click="startGame" />
+    <Button text="Sandbox" variant="alternate" @click="startGame" />
+    <Button text="Sandbox" variant="primary" @click="startGame" />
+    <Button text="Sandbox" variant="tutorial" @click="startGame" />
   </div>
 </template>
 

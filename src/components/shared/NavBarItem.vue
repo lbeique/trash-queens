@@ -1,14 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import TwoToneIcon from './TwoToneIcon.vue';
+import Iconify from './Iconify.vue';
 
 </script>
 
 <template>
     <div class="navbar-item">
-        <!-- <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/> -->
         <RouterLink :to=navTo class="navbar-link">
-            <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/>
+            <Iconify :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/>
             {{navName}}
         </RouterLink>
     </div>
@@ -36,7 +35,7 @@ export default {
         }
     },
     components: {
-        TwoToneIcon
+        Iconify
     },
     data() {
         return {};

@@ -1,5 +1,5 @@
 <script setup>
-import GameButton from '../components/shared/GameButton.vue'
+import Button from '../components/shared/Button.vue'
 import GameRecycleBins from '../components/gameplay/GameRecycleBins.vue';
 import Hint from '../components/gameplay/Hint.vue'
 import GameGarbage from '../components/gameplay/GameGarbage.vue';
@@ -12,7 +12,7 @@ import Timer from '../components/gameplay/Timer.vue';
 
 <template>
   <GoBack :isGame=true />
-  <GameButton text="Start Game" @click="startGame" />
+  <Button text="Start Game" variant="game" @click="startGame" />
   <div class="recycleBins__grid">
     <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
       @next-garbage="nextGarbage" />

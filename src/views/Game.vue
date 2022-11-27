@@ -1,14 +1,14 @@
 <script setup>
-import GameButton from '../components/shared/GameButton.vue'
+import Button from '../components/shared/Button.vue'
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <RouterLink to="/GamePlay-Easy">
-    <GameButton text="Easy Mode" @click="startGame" />
+    <Button text="Easy Mode" variant="primary" @click="startGame" />
   </RouterLink>
   <RouterLink to="/GamePlay-Hard">
-    <GameButton text="Hard Mode" @click="startGame" />
+    <Button text="Hard Mode" variant="primary" @click="startGame" />
   </RouterLink>
 
 </template>
