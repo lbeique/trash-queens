@@ -10,7 +10,7 @@ import Hint from '../components/Hint.vue'
     <div class="recycleBins__grid">
       <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin"/>
     </div>
-    <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
+    <Hint garbage-name="apple"  garbage-category="organics" />
   </main>
 </template>
 
