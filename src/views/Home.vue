@@ -4,9 +4,9 @@ import GameButton from '../components/GameButton.vue'
 </script>
 
 <template>
- 
+ <div class="center">
     <GameButton text="Sandbox" @click="startGame" />
- 
+</div>
 </template>
 
 <script>
@@ -26,8 +26,11 @@ export default {
 </script>
 
 <style scoped>
-  main {
+.center {
+    height: 100%;
     display: flex;
     justify-content: center;
-  }
+    align-items: center;
+}
+
 </style>
