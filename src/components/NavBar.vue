@@ -1,64 +1,27 @@
+<script setup>
+import NavBarItem from './NavBarItem.vue';
+</script>
+
 <template>
     <nav class="navbar">
-        <router-link to="/" class="navbar-link">Home</router-link>
-        <router-link to="/game" class="navbar-link">Game</router-link>
-        <router-link to="/resources" class="navbar-link">Resources</router-link>
+        <NavBarItem navIcon='mdi-light:home' navName='home' navTo='/' />
+        <NavBarItem navIcon='mdi-light:home' navName='game' navTo='/game' />
+        <NavBarItem navIcon='mdi-light:home' navName='resources' navTo='/resources' />
     </nav>
 </template>
 
 <script>
 export default {
-    name: "NavBar"
+    name: "NavBar",
+    components: { NavBarItem }
 };
 </script>
 
 <style scoped>
 .navbar {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857;
-    margin-bottom: 0;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-}
-
-.navbar-link {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #333;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857;
-    margin-bottom: 0;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    margin-right: 10px;
-}
-
-.navbar-link:hover {
-    background-color: #eee;
-}
-
-.navbar-link:active {
-    background-color: #ddd;
-}
-
-.navbar-link:disabled {
-    background-color: #ccc;
-    color: #999;
-    cursor: not-allowed;
+    background-color: #5AB4AB;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
 }
 </style>

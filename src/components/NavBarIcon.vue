@@ -1,66 +1,29 @@
-// vue component that takes an svg path and renders it as an icon
+<script setup>
+import { Icon, addIcon, addCollection } from '@iconify/vue'
+</script>
 
 <template>
-    <div>
-        <svg
-        :width="size"
-        :height="size"
-        :viewBox="viewBox"
-        :fill="fill"
-        :stroke="stroke"
-        :stroke-width="strokeWidth"
-        :stroke-linecap="strokeLinecap"
-        :stroke-linejoin="strokeLinejoin"
-        :class="className"
-        >
-        <path :d="path" />
-        </svg>
-    </div>
+        <Icon icon={{ iconName }} />
 </template>
 
 <script>
 export default {
     name: "NavBarIcon",
     props: {
-        path: {
+        iconName: {
             type: String,
             required: true
-        },
-        size: {
-            type: Number,
-            default: 24
-        },
-        viewBox: {
-            type: String,
-            default: "0 0 24 24"
-        },
-        fill: {
-            type: String,
-            default: "none"
-        },
-        stroke: {
-            type: String,
-            default: "currentColor"
-        },
-        strokeWidth: {
-            type: Number,
-            default: 2
-        },
-        strokeLinecap: {
-            type: String,
-            default: "round"
-        },
-        strokeLinejoin: {
-            type: String,
-            default: "round"
-        },
-        className: {
-            type: String,
-            default: ""
         }
-    }
+    },
+    data() {
+        return {};
+    },
 };
 </script>
 
 <style scoped>
+    Icon {
+        background-color: "#F5F9E9";
+        margin-right: 10px;
+    }
 </style>
