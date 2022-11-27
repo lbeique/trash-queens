@@ -6,7 +6,7 @@ import Hint from '../components/Hint.vue'
 <template>
   <main>
     <GameButton text="Start Game" @click="startGame" />
-    <Hint></Hint>
+    <Hint garbage-name="apple"  garbage-category="organics" />
   </main>
 </template>
 

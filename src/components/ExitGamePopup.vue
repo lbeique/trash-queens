@@ -4,23 +4,13 @@
 
 <script>
 export default {
-  props: {
-    garbageName: String,
-    garbageCategory:String
+  methods: {
+    hintBoxClose() {
+      let [hintBox] = document.getElementsByClassName("hintBox");
+      hintBox.style.display = "none";
+    },
   },
-  data() {
-    return {
-      listOfNotes: [
-        {category:"organics", hintNote:"This is the purest form of recycling, because nature does 100% of the work for us! "},
-        {category:"glass", hintNote:"We can take them and purpose them without any loss in quality."},
-        {category:"metal", hintNote:"No pun intended, but some can be used to create new road signs and window frames"},
-        {category:"paper", hintNote:"They can be recycled into a whole bunch of new things, including new boxes, paper towels!"},
-        {category:"e-waste", hintNote:"They are a treasure trove of recyclable material!"},
-        {category:"plastic", hintNote:"They can be recycled into ropes, packaging, chairs, brush bristles and even car bumpers!"},
-      ],
-      showHintBox: true,
-    };
-  },
+
   computed: {
     hintBoxNote: function () {
       const [NoteObject] = this.listOfNotes
@@ -34,20 +24,15 @@ export default {
 
 
 <template>
-
   <div class="hintParent">
-    <div  class="hintBox hintChild" v-if="showHintBox">
+
+    <div class="hintBox hintChild">
       <h3>{{hintBoxNote}}</h3>
-      <div class="hintX hintChild" @click="showHintBox = false">
+      <div class="hintX hintChild" @click="hintBoxClose()">
         <h2>x</h2>
       </div>
     </div>
-
-    <div class="hintButton hintChild" @click="showHintBox = !showHintBox">
-      <img src="../assets/idea.png" alt="H" >
-    </div>
   </div>
-
 </template>
 
 
@@ -55,7 +40,7 @@ export default {
 .hintParent {
   z-index:9;
   margin-top: 4rem;
-  /*WHY?? (from yasmina to herself)*/
+  /*WHY??*/
 }
 
 .hintChild {
@@ -72,7 +57,7 @@ export default {
   background-color: #F5F9E9;
   border-radius: 10px 10px 10px 28px;
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content:center ;
 }
