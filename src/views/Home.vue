@@ -5,9 +5,11 @@ import Button from '../components/shared/Button.vue'
 
 <template>
   <div class="center">
-    <Button text="Sandbox" variant="alternate" @click="startGame" />
     <Button text="Sandbox" variant="primary" @click="startGame" />
+    <Button text="Sandbox" variant="alternate" @click="startGame" />
+    <Button text="Sandbox" variant="game" @click="startGame" />
     <Button text="Sandbox" variant="tutorial" @click="startGame" />
+    <Button text="Sandbox" variant="tutorial-alternate" @click="startGame" />
   </div>
 </template>
 
@@ -31,7 +33,9 @@ export default {
 .center {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 </style>
