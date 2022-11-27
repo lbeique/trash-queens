@@ -20,10 +20,10 @@ import Timer from '../components/gameplay/Timer.vue';
   <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" />
   <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
   <Hint garbage-name="apple" garbage-category="organics" />
-  <ScoreVue :currentScore="0"></ScoreVue>
-  <FinalScoreVue :finalScore="0"></FinalScoreVue>
+  <ScoreVue :currentScore="0" />
+  <FinalScoreVue :finalScore="0" />
   <Timer></Timer>
-  <BackgroundGameVue :numWrong="3"></BackgroundGameVue>
+  <BackgroundGameVue :numWrong="3" />
 </template>
 
 <script>
