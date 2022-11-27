@@ -18,6 +18,7 @@ export default {
         {category:"e-waste", hintNote:"They are a treasure trove of recyclable material!"},
         {category:"plastic", hintNote:"They can be recycled into ropes, packaging, chairs, brush bristles and even car bumpers!"},
       ],
+      showHintBox: true,
     };
   },
   methods: {
@@ -25,14 +26,6 @@ export default {
       let [hintBox] = document.getElementsByClassName("hintBox");
       hintBox.style.display = "none";
     },
-    hintLampClicked(){
-      let [hintBox] = document.getElementsByClassName("hintBox");
-      hintBox.style.display === "none" || hintBox.style.display === ""
-          ? hintBox.style.display = "flex"
-          :hintBox.style.display = "none"
-
-      console.log( this.hintBoxNote)
-    }
   },
   computed: {
     hintBoxNote: function () {
@@ -48,17 +41,19 @@ export default {
 
 <template>
   <div class="hintParent">
-    <div class="hintBox hintChild">
+
+    <div  class="hintBox hintChild" v-if="showHintBox">
       <h3>{{hintBoxNote}}</h3>
       <div class="hintX hintChild" @click="hintBoxClose()">
+<!--        <div class="hintX hintChild" @click="showHintBox">-->
+
         <h2>x</h2>
       </div>
     </div>
 
-    <div class="hintButton hintChild" @click="hintLampClicked()">
+    <div class="hintButton hintChild" @click="showHintBox = !showHintBox">
       <img src="../assets/idea.png" alt="H" >
     </div>
-
   </div>
 
 </template>
@@ -85,7 +80,7 @@ export default {
   background-color: #F5F9E9;
   border-radius: 10px 10px 10px 28px;
 
-  display: none;
+  display: flex;
   align-items: center;
   justify-content:center ;
 }
