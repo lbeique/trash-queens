@@ -1,31 +1,31 @@
 <script setup>
-import ExitGamePrompt from './ExitGamePrompt.vue'
+import ExitGamePrompt from '../gameplay/ExitGamePrompt.vue'
 </script>
 
 <template>
   <div>
     <div class="go-back" @click="backBtnClicked">
-      <img src="../assets/back.png" alt="go back" >
+      <img src="../../assets/back.png" alt="go back">
     </div>
-      <ExitGamePrompt @stayInGame="handleCreate" v-if="openPrompt && isGame" />
+    <ExitGamePrompt @stayInGame="handleCreate" v-if="openPrompt && isGame" />
   </div>
 </template>
 
 <script>
 export default {
   name: "GoBack",
-  methods:{
-    backBtnClicked(){
+  methods: {
+    backBtnClicked() {
       this.isGame
-          ? this.openPrompt = true
-          : this.$router.go(-1)
+        ? this.openPrompt = true
+        : this.$router.go(-1)
     },
-    handleCreate(){
+    handleCreate() {
       this.openPrompt = false
     }
   },
   computed: {},
-  props:{
+  props: {
     isGame: Boolean,
   },
   data() {
@@ -38,12 +38,12 @@ export default {
 
 
 <style scoped>
-.go-back{
-  width:35px;
-  height:30px;
+.go-back {
+  width: 35px;
+  height: 30px;
 }
 
-img{
+img {
   height: 100%;
   width: 100%;
   object-fit: contain

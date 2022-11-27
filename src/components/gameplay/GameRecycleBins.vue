@@ -1,31 +1,26 @@
 <template>
-  <div
-    class="recycleBin__container"
-    :class="[
-      isDrag ? 'dragEnter' : '',
-      isRight ? 'isRight' : '',
-      isWrong ? 'isWrong' : ''
-    ]"
-    @drop="onDrop(binType)"
-    @dragover.prevent
-  >
+  <div class="recycleBin__container" :class="[
+    isDrag ? 'dragEnter' : '',
+    isRight ? 'isRight' : '',
+    isWrong ? 'isWrong' : ''
+  ]" @drop="onDrop(binType)" @dragover.prevent>
     <template v-if="binType == 'organics'">
-      <img src="../assets/recycling-bins/organic-bin.svg" alt="organic-bin" />
+      <img src="../../assets/recycling-bins/organic-bin.svg" alt="organic-bin" />
     </template>
     <template v-else-if="binType == 'glass'">
-      <img src="../assets/recycling-bins/glass-bin.svg" alt="glass-bin" />
+      <img src="../../assets/recycling-bins/glass-bin.svg" alt="glass-bin" />
     </template>
     <template v-else-if="binType == 'metal'">
-      <img src="../assets/recycling-bins/metal-bin.svg" alt="metal-bin" />
+      <img src="../../assets/recycling-bins/metal-bin.svg" alt="metal-bin" />
     </template>
     <template v-else-if="binType == 'paper'">
-      <img src="../assets/recycling-bins/paper-bin.svg" alt="paper-bin" />
+      <img src="../../assets/recycling-bins/paper-bin.svg" alt="paper-bin" />
     </template>
     <template v-else-if="binType == 'e-waste'">
-      <img src="../assets/recycling-bins/e-waste-bin.svg" alt="e-waste-bin" />
+      <img src="../../assets/recycling-bins/e-waste-bin.svg" alt="e-waste-bin" />
     </template>
     <template v-else-if="binType == 'plastic'">
-      <img src="../assets/recycling-bins/plastic-bin.svg" alt="plastic-bin" />
+      <img src="../../assets/recycling-bins/plastic-bin.svg" alt="plastic-bin" />
     </template>
     <p>{{ binType.toUpperCase() }}</p>
   </div>
@@ -37,7 +32,7 @@ export default {
   components: {},
   methods: {
     onDrop(binType) {
-      if(binType === this.currentGarbage.garbageCategory){
+      if (binType === this.currentGarbage.garbageCategory) {
         this.isRight = true
       } else {
         this.isWrong = true
@@ -56,7 +51,7 @@ export default {
     //   console.log("leave");
     //   this.isDrag = false;
     // },
-    
+
   },
   computed: {},
   props: {
@@ -92,17 +87,17 @@ export default {
   box-shadow: 0 0.2rem 2px #cac2b8;
 }
 
-.isRight{
+.isRight {
   background-color: #A4FFA7;
 }
 
-.isWrong{
+.isWrong {
   background-color: #FFAFA4;
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
 }
 
 p {
-  font-family: "Fuzzy Bubbles", cursive;
+  font-family: "FuzzyBubbles-Regular", sans-serif;
   font-size: 0.813rem;
   color: black;
   font-weight: bold;
@@ -114,21 +109,26 @@ img {
 }
 
 @keyframes shake {
-  10%, 90% {
+
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
-  20%, 80% {
+
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
-
 </style>

@@ -2,17 +2,19 @@
 <template>
     <div>
         <div class="scoreContainer">
-            <div>BACK</div>
-            <span>Score: {{currentScore}}</span>
+            <GoBack :isGame=true />
+            <span>Score: {{ currentScore }}</span>
         </div>
     </div>
 </template>
 
 <script>
+import GoBack from "../shared/GoBack.vue";
 export default {
     props: [
         "currentScore"
-    ]
+    ],
+    components: { GoBack }
 };
 </script>
 
@@ -28,5 +30,6 @@ export default {
     align-items: center;
     padding: 1% 3%;
     font-size: 1rem;
+    font-family: "Nunito-Regular";
 }
 </style>

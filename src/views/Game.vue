@@ -1,11 +1,16 @@
 <script setup>
-import GameButton from '../components/GameButton.vue'
+import GameButton from '../components/shared/GameButton.vue'
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
- 
-    <GameButton text="Start Game" @click="startGame" />
- 
+  <RouterLink to="/GamePlay-Easy">
+    <GameButton text="Easy Mode" @click="startGame" />
+  </RouterLink>
+  <RouterLink to="/GamePlay-Hard">
+    <GameButton text="Hard Mode" @click="startGame" />
+  </RouterLink>
+
 </template>
 
 <script>
@@ -25,8 +30,8 @@ export default {
 </script>
 
 <style scoped>
-  main {
-    display: flex;
-    justify-content: center;
-  }
+main {
+  display: flex;
+  justify-content: center;
+}
 </style>

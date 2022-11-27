@@ -1,31 +1,31 @@
 <template>
     <div class="garbage__container">
         <img :src="garbageUrl" draggable="true">
-       <span class="garbage__name">{{ selectedGarbage.garbageName }}</span>
+        <span class="garbage__name">{{ selectedGarbage.garbageName }}</span>
     </div>
 </template>
 
 <script>
-export default{
+export default {
     name: "GameGarbage",
     methods: {
-        getRandomGarbage(){
-            this.selectedGarbage = this.garbages[Math.floor(Math.random()*this.garbages.length)]
-            this.garbageUrl = new URL(`../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url).href
+        getRandomGarbage() {
+            this.selectedGarbage = this.garbages[Math.floor(Math.random() * this.garbages.length)]
+            this.garbageUrl = new URL(`../../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url).href
             this.setCurrentGarbage(this.selectedGarbage)
         }
     },
     computed: {
-        
+
     },
     props: {
         setCurrentGarbage: Function
     },
-    beforeMount(){
+    beforeMount() {
         this.getRandomGarbage()
     },
     data() {
-        return { 
+        return {
             selectedGarbage: {},
             garbageUrl: '',
             garbages: [
@@ -112,8 +112,7 @@ export default{
 </script>
 
 <style scoped>
-
-.garbage__container{
+.garbage__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,13 +121,13 @@ export default{
     height: 3.979rem;
 }
 
-img{
+img {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
 }
 
-span{
+span {
     display: flex;
     align-items: center;
     border-radius: 0.625rem;
@@ -140,5 +139,4 @@ span{
     font-size: 1.063rem;
     font-weight: bold;
 }
-
 </style>
