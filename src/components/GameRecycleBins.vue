@@ -56,7 +56,6 @@ export default {
     //   console.log("leave");
     //   this.isDrag = false;
     // },
-    
   },
   computed: {},
   props: {
