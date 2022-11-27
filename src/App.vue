@@ -1,5 +1,5 @@
 <script setup>
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/shared/NavBar.vue';
 </script>
 
 <template>
@@ -37,5 +37,4 @@ import NavBar from './components/NavBar.vue';
 main {
   height: 100vh;
 }
-
 </style>
