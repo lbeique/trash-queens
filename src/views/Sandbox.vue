@@ -1,10 +1,12 @@
 <script setup>
 import GameButton from '../components/GameButton.vue'
+import Hint from '../components/Hint.vue'
 </script>
 
 <template>
   <main>
     <GameButton text="Start Game" @click="startGame" />
+    <Hint></Hint>
   </main>
 </template>
 
@@ -27,6 +29,8 @@ export default {
 <style scoped>
   main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    gap: 6rem;
   }
 </style>
