@@ -1,9 +1,12 @@
 <script setup>
-import { Icon, addIcon, addCollection } from '@iconify/vue'
+import { Icon } from '@iconify/vue'
+
 </script>
 
 <template>
-        <Icon icon={{ iconName }} />
+    <div>
+        <Icon class='icon' icon='icon-park-twotone:home' :color="colorObject" />
+    </div>
 </template>
 
 <script>
@@ -15,8 +18,23 @@ export default {
             required: true
         }
     },
+    components: {
+        Icon
+    },
+    computed: {
+        colorObject() {
+            return {
+                color: '#F5F9E9'
+            }
+        }
+    },
     data() {
-        return {};
+        return {
+            colorObject: {
+                activeColor: 'F7C932',
+                inactiveColor: '#F5F9E9'
+            }
+        };
     },
 };
 </script>

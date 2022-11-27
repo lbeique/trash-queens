@@ -4,16 +4,18 @@ import NavBarItem from './NavBarItem.vue';
 
 <template>
     <nav class="navbar">
-        <NavBarItem navIcon='mdi-light:home' navName='home' navTo='/' />
-        <NavBarItem navIcon='mdi-light:home' navName='game' navTo='/game' />
-        <NavBarItem navIcon='mdi-light:home' navName='resources' navTo='/resources' />
+        <NavBarItem navIcon='icon-park-twotone:home' navName='home' navTo='/' />
+        <NavBarItem navIcon='icon-park-twotone:game-ps' navName='game' navTo='/game' />
+        <NavBarItem navIcon='icon-park-twotone:book-open' navName='resources' navTo='/resources' />
     </nav>
 </template>
 
 <script>
 export default {
     name: "NavBar",
-    components: { NavBarItem }
+    components: { 
+        NavBarItem
+    }
 };
 </script>
 

@@ -1,18 +1,22 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
+import NavBarItem from './components/NavBarItem.vue';
+import NavBarIcon from './components/NavBarIcon.vue';
 </script>
 
 <template>
   <footer>
-        <NavBar />
+        <!-- <NavBar /> -->
+        <!-- <NavBarItem /> -->
+        <NavBarIcon iconName="apples"/>
     </footer>
 </template>
 
 <style scoped>
 @font-face {
   font-family: "Nunito";
-  src: local("Merienda"),
-   url(./fonts/Merienda/Merienda-Regular.ttf) format("truetype");
+  src: local("Nunito"),
+   url('https://fonts.googleapis.com/css2?family=Nunito&display=swap') format("truetype");
 }
 
 @media (min-width: 1024px) {
