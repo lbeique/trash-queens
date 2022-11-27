@@ -54,5 +54,6 @@ export default {
         color: #F5F9E9;
         font-size: 0.75rem;
         font-family: "Nunito-Regular";
+        text-decoration: none;
     }
 </style>

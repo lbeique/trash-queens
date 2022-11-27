@@ -1,10 +1,11 @@
 <script setup>
 import GameButton from '../components/GameButton.vue'
+
 </script>
 
 <template>
  
-    <GameButton text="Start Game" @click="startGame" />
+    <GameButton text="Sandbox" @click="startGame" />
  
 </template>
 
@@ -13,7 +14,7 @@ export default {
   name: "Sandbox",
   methods: {
     startGame() {
-      console.log("Starting game...");
+        this.$router.push('/sandbox');
     }
   },
   computed: {},

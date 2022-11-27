@@ -21,9 +21,11 @@ export default {
 
 <style scoped>
 .navbar {
-    background-color: #5AB4AB;
     display: flex;
     justify-content: space-evenly;
+    position:sticky;
+    background-color: #5AB4AB;
     padding: 1rem 0;
+    bottom: 0;
 }
 </style>

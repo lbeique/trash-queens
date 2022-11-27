@@ -6,9 +6,7 @@ import NavBar from './components/NavBar.vue';
   <main>
     <RouterView />
   </main>
-  <footer>
-    <NavBar />
-  </footer>
+  <NavBar />
 </template>
 
 <style scoped>
@@ -40,9 +38,4 @@ main {
   height: 100vh;
 }
 
-footer {
-  position: sticky;
-  margin-top: 12rem;
-  bottom: 0;
-}
 </style>
