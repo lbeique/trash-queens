@@ -37,7 +37,6 @@ export default {
   components: {},
   methods: {
     onDrop(binType) {
-      console.log('bin type', binType)
       if(binType === this.currentGarbage.garbageCategory){
         this.isRight = true
       } else {

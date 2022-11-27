@@ -13,9 +13,6 @@ export default{
             this.selectedGarbage = this.garbages[Math.floor(Math.random()*this.garbages.length)]
             this.garbageUrl = new URL(`../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url).href
             this.setCurrentGarbage(this.selectedGarbage)
-        },
-        onDragEnd(){
-            this.getRandomGarbage()
         }
     },
     computed: {
