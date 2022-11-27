@@ -2,6 +2,7 @@
 import GameButton from '../components/GameButton.vue'
 import GameRecycleBins from '../components/GameRecycleBins.vue';
 import Hint from '../components/Hint.vue'
+import GameGarbage from '../components/GameGarbage.vue';
 import GoBack from '../components/GoBack.vue'
 // import ExitGamePrompt from '../components/ExitGamePrompt.vue'
 import ScoreVue from '../components/Score.vue';
@@ -15,8 +16,10 @@ import Timer from '../components/Timer.vue';
     <GoBack :isGame= true />
     <GameButton text="Start Game" @click="startGame" />
     <div class="recycleBins__grid">
-      <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin"/>
+      <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage" @next-garbage="nextGarbage"/>
     </div>
+    <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage"/>
+    <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
     <Hint garbage-name="apple"  garbage-category="organics" />
     <ScoreVue :currentScore="0"></ScoreVue>
     <FinalScoreVue :finalScore="0"></FinalScoreVue>
@@ -32,18 +35,25 @@ export default {
   methods: {
     startGame() {
       console.log("Starting game...");
+    },
+    setCurrentGarbage(garbage){
+      this.currentGarbage = garbage
+    },
+    nextGarbage(){
+      this.$refs.gameGarbage.getRandomGarbage()
     }
   },
   computed: {},
   props: {},
   data() {
     return { 
+        currentGarbage: {},
         recycleBins: [
-          'organic',
+          'organics',
           'glass',
           'metal',
           'paper',
-          'eWaste',
+          'e-waste',
           'plastic'
         ]
     };
