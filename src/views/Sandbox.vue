@@ -2,6 +2,8 @@
 import GameButton from '../components/GameButton.vue'
 import GameRecycleBins from '../components/GameRecycleBins.vue';
 import Hint from '../components/Hint.vue'
+import GoBack from '../components/GoBack.vue'
+// import ExitGamePrompt from '../components/ExitGamePrompt.vue'
 import ScoreVue from '../components/Score.vue';
 import FinalScoreVue from '../components/FinalScore.vue';
 import BackgroundGameVue from '../components/BackgroundGame.vue';
@@ -10,6 +12,7 @@ import Timer from '../components/Timer.vue';
 
 <template>
   <main>
+    <GoBack :isGame= true />
     <GameButton text="Start Game" @click="startGame" />
     <div class="recycleBins__grid">
       <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin"/>
@@ -54,6 +57,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     gap: 6rem;
+    padding:5px
     background-color: white;
   }
 
