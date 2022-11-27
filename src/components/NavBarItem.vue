@@ -1,18 +1,16 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import NavBarIcon from './NavBarIcon.vue';
+import TwoToneIcon from './TwoToneIcon.vue';
 
 </script>
 
 <template>
-    <div class="navbar">
-        <NavBarIcon iconName={{ navIcon }} />
-        <RouterLink to={{ navTo }} class="navbar-link">
-            {{ navName }}
+    <div class="navbar-item">
+        <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/>
+        <RouterLink :to=navTo class="navbar-link">
+            {{navName}}
         </RouterLink>
     </div>
-    
-    <RouterView />
 </template>
 
 <script>
@@ -30,10 +28,14 @@ export default {
         navIcon: {
             type: String,
             required: true
+        },
+        navColor: {
+            type: String,
+            required: true
         }
     },
     components: {
-        NavBarIcon
+        TwoToneIcon
     },
     data() {
         return {};
@@ -42,14 +44,15 @@ export default {
 </script>
 
 <style scoped>
-    .navbar {
+    .navbar-item {
         display: flex;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
     }
     .navbar-link {
         color: #F5F9E9;
         font-size: 0.75rem;
-        font-family: "Nunito", sans-serif;
+        font-family: "Nunito-Regular";
     }
 </style>

@@ -3,9 +3,9 @@ import GameButton from '../components/GameButton.vue'
 </script>
 
 <template>
-  <main>
+ 
     <GameButton text="Start Game" @click="startGame" />
-  </main>
+ 
 </template>
 
 <script>

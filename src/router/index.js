@@ -15,8 +15,7 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Game.vue')
-    }
-    ,
+    },
     {
       path: '/resources',
       name: 'resources',
@@ -24,6 +23,23 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/Resources.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/About.vue')
+    }
+    ,
+    {
+      path: '/sandbox',
+      name: 'sandbox',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/Sandbox.vue')
     }
   ]
 })

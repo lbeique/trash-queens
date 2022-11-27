@@ -1,48 +1,48 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
-import NavBarItem from './components/NavBarItem.vue';
-import NavBarIcon from './components/NavBarIcon.vue';
 </script>
 
 <template>
+  <main>
+    <RouterView />
+  </main>
   <footer>
-        <!-- <NavBar /> -->
-        <!-- <NavBarItem /> -->
-        <NavBarIcon iconName="apples"/>
-    </footer>
+    <NavBar />
+  </footer>
 </template>
 
 <style scoped>
 @font-face {
-  font-family: "Nunito";
+  font-family: "Nunito-Regular";
   src: local("Nunito"),
-   url('https://fonts.googleapis.com/css2?family=Nunito&display=swap') format("truetype");
+    url('../src/assets/fonts/Nunito-Regular.ttf') format("truetype");
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+@font-face {
+  font-family: "Nunito-Bold";
+  src: local("Nunito"),
+    url('../src/assets/fonts/Nunito-Bold.ttf') format("truetype");
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+@font-face {
+  font-family: "FuzzyBubbles-Regular";
+  src: local("FuzzyBubbles"),
+    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+@font-face {
+  font-family: "FuzzyBubbles-Bold";
+  src: local("FuzzyBubbles"),
+    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
+}
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+main {
+  height: 100vh;
+}
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+footer {
+  position: sticky;
+  margin-top: 12rem;
+  bottom: 0;
 }
 </style>
