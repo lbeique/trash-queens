@@ -4,36 +4,13 @@
 
 <script>
 export default {
-  props: {
-    garbageName: String,
-    garbageCategory:String
-  },
-  data() {
-    return {
-      listOfNotes: [
-        {category:"organics", hintNote:"This is the purest form of recycling, because nature does 100% of the work for us! "},
-        {category:"glass", hintNote:"We can take them and purpose them without any loss in quality."},
-        {category:"metal", hintNote:"No pun intended, but some can be used to create new road signs and window frames"},
-        {category:"paper", hintNote:"They can be recycled into a whole bunch of new things, including new boxes, paper towels!"},
-        {category:"e-waste", hintNote:"They are a treasure trove of recyclable material!"},
-        {category:"plastic", hintNote:"They can be recycled into ropes, packaging, chairs, brush bristles and even car bumpers!"},
-      ],
-    };
-  },
   methods: {
     hintBoxClose() {
       let [hintBox] = document.getElementsByClassName("hintBox");
       hintBox.style.display = "none";
     },
-    hintLampClicked(){
-      let [hintBox] = document.getElementsByClassName("hintBox");
-      hintBox.style.display === "none" || hintBox.style.display === ""
-          ? hintBox.style.display = "flex"
-          :hintBox.style.display = "none"
-
-      console.log( this.hintBoxNote)
-    }
   },
+
   computed: {
     hintBoxNote: function () {
       const [NoteObject] = this.listOfNotes
@@ -48,19 +25,14 @@ export default {
 
 <template>
   <div class="hintParent">
+
     <div class="hintBox hintChild">
       <h3>{{hintBoxNote}}</h3>
       <div class="hintX hintChild" @click="hintBoxClose()">
         <h2>x</h2>
       </div>
     </div>
-
-    <div class="hintButton hintChild" @click="hintLampClicked()">
-      <img src="../assets/idea.png" alt="H" >
-    </div>
-
   </div>
-
 </template>
 
 
