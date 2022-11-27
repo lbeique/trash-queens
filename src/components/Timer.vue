@@ -40,21 +40,21 @@ export default {
     },
     methods: {
         startTimer() {
-            this.timerInterval = setInterval(() => {
+            // this.timerInterval = setInterval(() => {
                     
-            if (this.timeLeft == 0) {
-                this.timePassed = 0;
-            } else {
-            // The amount of time passed increments by one
-            this.timePassed = this.timePassed += 1;
-            }
+            // if (this.timeLeft == 0) {
+            //     this.timePassed = 0;
+            // } else {
+            // // The amount of time passed increments by one
+            // this.timePassed = this.timePassed += 1;
+            // }
             
-            this.timeLeft = this.TIME_LIMIT - this.timePassed;
+            // this.timeLeft = this.TIME_LIMIT - this.timePassed;
             
-            // The time left label is updated
-            document.getElementById("base-timer-label").innerHTML = this.timeLeft;
-            setCircleDasharray();
-            }, 1000)
+            // // The time left label is updated
+            // document.getElementById("base-timer-label").innerHTML = this.timeLeft;
+            // setCircleDasharray();
+            // }, 1000)
         }
     },
         // Divides time left by the defined time limit.

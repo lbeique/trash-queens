@@ -1,6 +1,15 @@
 <template>
-  <div class="recycleBinContainer">
-    <template v-if="binType == 'organic'">
+  <div
+    class="recycleBin__container"
+    :class="[
+      isDrag ? 'dragEnter' : '',
+      isRight ? 'isRight' : '',
+      isWrong ? 'isWrong' : ''
+    ]"
+    @drop="onDrop(binType)"
+    @dragover.prevent
+  >
+    <template v-if="binType == 'organics'">
       <img src="../assets/recycling-bins/organic-bin.svg" alt="organic-bin" />
     </template>
     <template v-else-if="binType == 'glass'">
@@ -12,7 +21,7 @@
     <template v-else-if="binType == 'paper'">
       <img src="../assets/recycling-bins/paper-bin.svg" alt="paper-bin" />
     </template>
-    <template v-else-if="binType == 'eWaste'">
+    <template v-else-if="binType == 'e-waste'">
       <img src="../assets/recycling-bins/e-waste-bin.svg" alt="e-waste-bin" />
     </template>
     <template v-else-if="binType == 'plastic'">
@@ -26,17 +35,47 @@
 export default {
   name: "GameRecycleBin",
   components: {},
-  methods: {},
+  methods: {
+    onDrop(binType) {
+      console.log('bin type', binType)
+      if(binType === this.currentGarbage.garbageCategory){
+        this.isRight = true
+      } else {
+        this.isWrong = true
+      }
+      setTimeout(() => {
+        this.isRight = false
+        this.isWrong = false
+      }, 1000)
+      this.$emit('next-garbage')
+    },
+    // onDragEnter() {
+    //   console.log("enter");
+    //   this.isDrag = true;
+    // },
+    // onDragLeave() {
+    //   console.log("leave");
+    //   this.isDrag = false;
+    // },
+    
+  },
   computed: {},
-  props: ["binType"],
+  props: {
+    binType: String,
+    currentGarbage: Object,
+  },
   data() {
-    return {};
+    return {
+      isDrag: false,
+      isWrong: false,
+      isRight: false
+    };
   },
 };
 </script>
 
 <style scoped>
-.recycleBinContainer {
+.recycleBin__container {
   display: flex;
   width: 6.25rem;
   height: 6.5rem;
@@ -46,12 +85,21 @@ export default {
   border-radius: 0.938rem;
   padding: 1rem;
   background-color: #fff5e9;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
-.recycleBinContainer:hover{
-    transform: translateY(-.2rem);
-    box-shadow: 0 .2rem 2px #cac2b8 ;
+.dragEnter {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.2rem 2px #cac2b8;
+}
+
+.isRight{
+  background-color: #A4FFA7;
+}
+
+.isWrong{
+  background-color: #FFAFA4;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 
 p {
@@ -64,6 +112,24 @@ p {
 img {
   width: 100%;
   height: 100%;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 </style>

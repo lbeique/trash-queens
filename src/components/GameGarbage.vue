@@ -1,6 +1,6 @@
 <template>
     <div class="garbage__container">
-        <img :src="garbageUrl" draggable="true" @dragstart="startDrag">
+        <img :src="garbageUrl" draggable="true">
        <span class="garbage__name">{{ selectedGarbage.garbageName }}</span>
     </div>
 </template>
@@ -12,17 +12,17 @@ export default{
         getRandomGarbage(){
             this.selectedGarbage = this.garbages[Math.floor(Math.random()*this.garbages.length)]
             this.garbageUrl = new URL(`../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url).href
+            this.setCurrentGarbage(this.selectedGarbage)
         },
-        startDrag(event){
-            event.preventDefault()
-            event.dataTransfer.setData('garbage object', this.selectedGarbage)
+        onDragEnd(){
+            this.getRandomGarbage()
         }
     },
     computed: {
         
     },
     props: {
-        dragFn: Function
+        setCurrentGarbage: Function
     },
     beforeMount(){
         this.getRandomGarbage()

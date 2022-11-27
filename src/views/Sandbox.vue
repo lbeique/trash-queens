@@ -16,9 +16,9 @@ import Timer from '../components/Timer.vue';
     <GoBack :isGame= true />
     <GameButton text="Start Game" @click="startGame" />
     <div class="recycleBins__grid">
-      <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin"/>
+      <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage" @next-garbage="nextGarbage"/>
     </div>
-    <GameGarbage :dragFn="listenDrop"/>
+    <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage"/>
     <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
     <Hint garbage-name="apple"  garbage-category="organics" />
     <ScoreVue :currentScore="0"></ScoreVue>
@@ -36,20 +36,24 @@ export default {
     startGame() {
       console.log("Starting game...");
     },
-    listenDrop(){
-      console.log('drag start')
+    setCurrentGarbage(garbage){
+      this.currentGarbage = garbage
+    },
+    nextGarbage(){
+      this.$refs.gameGarbage.getRandomGarbage()
     }
   },
   computed: {},
   props: {},
   data() {
     return { 
+        currentGarbage: {},
         recycleBins: [
-          'organic',
+          'organics',
           'glass',
           'metal',
           'paper',
-          'eWaste',
+          'e-waste',
           'plastic'
         ]
     };
