@@ -1,12 +1,18 @@
 <script setup>
 import GameButton from '../components/GameButton.vue'
 import Hint from '../components/Hint.vue'
+import GoBack from '../components/GoBack.vue'
+// import ExitGamePrompt from '../components/ExitGamePrompt.vue'
+
 </script>
 
 <template>
   <main>
+    <GoBack :isGame= true />
     <GameButton text="Start Game" @click="startGame" />
     <Hint garbage-name="apple"  garbage-category="organics" />
+<!--    <ExitGamePrompt/>-->
+
   </main>
 </template>
 
@@ -32,5 +38,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     gap: 6rem;
+
+    padding:5px
   }
 </style>

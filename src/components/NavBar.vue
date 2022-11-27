@@ -2,7 +2,7 @@
     <nav class="navbar">
         <router-link to="/" class="navbar-link">Home</router-link>
         <router-link to="/game" class="navbar-link">Game</router-link>
-        <router-link to="/ressources" class="navbar-link">Ressources</router-link>
+        <router-link to="/resources" class="navbar-link">Ressources</router-link>
     </nav>
 </template>
 
