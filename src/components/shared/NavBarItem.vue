@@ -6,8 +6,9 @@ import TwoToneIcon from './TwoToneIcon.vue';
 
 <template>
     <div class="navbar-item">
-        <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/>
+        <!-- <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/> -->
         <RouterLink :to=navTo class="navbar-link">
+            <TwoToneIcon :iconName=navIcon :iconColor=navColor :iconHeight="40" :iconWidth="32"/>
             {{navName}}
         </RouterLink>
     </div>
@@ -44,16 +45,20 @@ export default {
 </script>
 
 <style scoped>
-    .navbar-item {
+    /* .navbar-item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    }
+    } */
     .navbar-link {
         color: #F5F9E9;
         font-size: 0.75rem;
         font-family: "Nunito-Regular";
         text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 </style>

@@ -2,9 +2,9 @@
 <template>
     <div>
         <div class="finalScoreContainer">
-            <img src="../assets/trees.png" alt="cartoon trees">
-            <span>Your Score: {{finalPercentage}}%</span>
-            <span>{{finalScore}}/25</span>
+            <img src="../../assets/trees.png" alt="cartoon trees">
+            <span>Your Score: {{ finalPercentage }}%</span>
+            <span>{{ finalScore }}/18</span>
         </div>
     </div>
 </template>
@@ -16,7 +16,7 @@ export default {
     ],
     computed: {
         finalPercentage() {
-            return this.finalScore/25 * 100
+            return this.finalScore / 18 * 100
         }
     }
 };
