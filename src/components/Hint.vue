@@ -38,7 +38,7 @@ export default {
   // },
   computed: {
     hintBoxNote: function () {
-      const [NoteObject] = this.listOfNotes
+      const NoteObject = this.listOfNotes
           .filter( listItem => listItem.category === this.garbageCategory )
       return NoteObject.hintNote
     },
