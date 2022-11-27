@@ -21,12 +21,6 @@ export default {
       showHintBox: true,
     };
   },
-  methods: {
-    hintBoxClose() {
-      let [hintBox] = document.getElementsByClassName("hintBox");
-      hintBox.style.display = "none";
-    },
-  },
   computed: {
     hintBoxNote: function () {
       const [NoteObject] = this.listOfNotes
@@ -40,13 +34,11 @@ export default {
 
 
 <template>
-  <div class="hintParent">
 
+  <div class="hintParent">
     <div  class="hintBox hintChild" v-if="showHintBox">
       <h3>{{hintBoxNote}}</h3>
-      <div class="hintX hintChild" @click="hintBoxClose()">
-<!--        <div class="hintX hintChild" @click="showHintBox">-->
-
+      <div class="hintX hintChild" @click="showHintBox = false">
         <h2>x</h2>
       </div>
     </div>
@@ -63,7 +55,7 @@ export default {
 .hintParent {
   z-index:9;
   margin-top: 4rem;
-  /*WHY??*/
+  /*WHY?? (from yasmina to herself)*/
 }
 
 .hintChild {
