@@ -16,16 +16,15 @@ import GameTrashMountain from '../components/gameplay/GameTrashMountain.vue';
   <Button text="Start Game" variant="game" @click="startGame" />
   <div class="recycleBins__grid">
     <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
-      @next-garbage="nextGarbage" @wrong-drop="wrongDrop"/>
+      @next-garbage="nextGarbage" @wrong-drop="wrongDrop" />
   </div>
   <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" />
-  <GameTrashMountain ref="gameTrashMountain"/>
-  <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
+  <GameTrashMountain ref="gameTrashMountain" />
   <!-- <Hint garbage-name="apple" garbage-category="organics" /> -->
   <ScoreVue :currentScore="0"></ScoreVue>
   <FinalScoreVue :finalScore="0"></FinalScoreVue>
   <Timer></Timer>
-  <BackgroundGameVue :numWrong="3"></BackgroundGameVue>
+  <BackgroundGameVue :numWrong="3" />
 </template>
 
 <script>
@@ -41,7 +40,7 @@ export default {
     nextGarbage() {
       this.$refs.gameGarbage.getRandomGarbage()
     },
-    wrongDrop(){
+    wrongDrop() {
       this.$refs.gameTrashMountain.moveMountainY()
     }
   },
