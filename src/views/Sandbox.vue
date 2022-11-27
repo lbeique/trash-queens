@@ -8,6 +8,7 @@ import ScoreVue from '../components/gameplay/Score.vue';
 import FinalScoreVue from '../components/gameplay/FinalScore.vue';
 import BackgroundGameVue from '../components/gameplay/BackgroundGame.vue';
 import Timer from '../components/gameplay/Timer.vue';
+import GameTrashMountain from '../components/gameplay/GameTrashMountain.vue';
 </script>
 
 <template>
@@ -15,11 +16,12 @@ import Timer from '../components/gameplay/Timer.vue';
   <Button text="Start Game" variant="game" @click="startGame" />
   <div class="recycleBins__grid">
     <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
-      @next-garbage="nextGarbage" />
+      @next-garbage="nextGarbage" @wrong-drop="wrongDrop"/>
   </div>
   <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" />
+  <GameTrashMountain ref="gameTrashMountain"/>
   <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
-  <Hint garbage-name="apple" garbage-category="organics" />
+  <!-- <Hint garbage-name="apple" garbage-category="organics" /> -->
   <ScoreVue :currentScore="0"></ScoreVue>
   <FinalScoreVue :finalScore="0"></FinalScoreVue>
   <Timer></Timer>
@@ -38,6 +40,9 @@ export default {
     },
     nextGarbage() {
       this.$refs.gameGarbage.getRandomGarbage()
+    },
+    wrongDrop(){
+      this.$refs.gameTrashMountain.moveMountainY()
     }
   },
   computed: {},

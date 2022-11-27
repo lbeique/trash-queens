@@ -125,6 +125,7 @@ img {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
+    z-index: 10;
 }
 
 span {
