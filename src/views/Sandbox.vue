@@ -2,6 +2,7 @@
 import GameButton from '../components/GameButton.vue'
 import GameRecycleBins from '../components/GameRecycleBins.vue';
 import Hint from '../components/Hint.vue'
+import GameGarbage from '../components/GameGarbage.vue';
 </script>
 
 <template>
@@ -10,7 +11,8 @@ import Hint from '../components/Hint.vue'
     <div class="recycleBins__grid">
       <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin"/>
     </div>
-    <Hint garbage-name="apple"  garbage-category="organics" />
+    <GameGarbage :dragFn="listenDrop"/>
+    <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
   </main>
 </template>
 
@@ -20,6 +22,9 @@ export default {
   methods: {
     startGame() {
       console.log("Starting game...");
+    },
+    listenDrop(){
+      console.log('drag start')
     }
   },
   computed: {},
