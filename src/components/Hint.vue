@@ -1,9 +1,34 @@
-<!--Component Usage: -->
-<!--  <Hint garbage-name="apple"  garbage-category="organics" />-->
+<template>
+
+  <div class="hintParent">
+    <div  class="hintBox hintChild" v-if="showHintBox">
+      <h3>{{hintBoxNote}}</h3>
+      <div class="hintX hintChild" @click="showHintBox = false">
+        <h2>x</h2>
+      </div>
+    </div>
+
+    <div class="hintButton hintChild" @click="showHintBox = !showHintBox">
+      <img src="../assets/idea.png" alt="hint" >
+    </div>
+  </div>
+
+</template>
+
 
 
 <script>
+
 export default {
+  name: "Hint",
+  methods:{},
+  computed: {
+    hintBoxNote: function () {
+      const [NoteObject] = this.listOfNotes
+          .filter( listItem => listItem.category === this.garbageCategory )
+      return NoteObject.hintNote
+    },
+  },
   props: {
     garbageName: String,
     garbageCategory:String
@@ -18,60 +43,19 @@ export default {
         {category:"e-waste", hintNote:"They are a treasure trove of recyclable material!"},
         {category:"plastic", hintNote:"They can be recycled into ropes, packaging, chairs, brush bristles and even car bumpers!"},
       ],
+      showHintBox: false,
     };
   },
-  methods: {
-    hintBoxClose() {
-      let [hintBox] = document.getElementsByClassName("hintBox");
-      hintBox.style.display = "none";
-    },
-    hintLampClicked(){
-      let [hintBox] = document.getElementsByClassName("hintBox");
-      hintBox.style.display === "none" || hintBox.style.display === ""
-          ? hintBox.style.display = "flex"
-          :hintBox.style.display = "none"
-    }
-  },
-  // watch: {
-  //   garbageName: function (newGarbageName, oldGarbageName) {
-  //   },
-  // },
-  computed: {
-    hintBoxNote: function () {
-      const NoteObject = this.listOfNotes
-          .filter( listItem => listItem.category === this.garbageCategory )
-      return NoteObject.hintNote
-    },
-  }
 };
 
 </script>
 
 
-<template>
-  <div class="hintParent">
-
-    <div class="hintBox hintChild">
-      <h3>{{hintBoxNote}}</h3>
-      <div class="hintX hintChild" @click="hintBoxClose()">
-        <h2>x</h2>
-      </div>
-    </div>
-
-    <div class="hintButton hintChild" @click="hintLampClicked()">
-<!--      <h2>H</h2>-->
-      <img src="../assets/idea.png" alt="H" >
-    </div>
-
-  </div>
-</template>
-
-
 <style scoped>
-.hintParent {
+.promptParent {
   z-index:9;
-  margin-top: 4rem;
-  /*WHY??*/
+  /*margin-top: 4rem;*/
+  /*WHY?? (from yasmina to herself)*/
 }
 
 .hintChild {
@@ -82,13 +66,13 @@ export default {
   bottom: 0;
   left: 0;
 
-  padding: 40px;
-  height :250px;
-  width: 330px;
+  padding: 35px;
+  height :245px;
+  width: 320px;
   background-color: #F5F9E9;
   border-radius: 10px 10px 10px 28px;
 
-  display: none;
+  display: flex;
   align-items: center;
   justify-content:center ;
 }
@@ -122,7 +106,6 @@ export default {
 }
 
 .hintButton img{
-
   height: 75%;
   width: 75%;
   object-fit: contain
