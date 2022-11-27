@@ -36,6 +36,7 @@ export default {
         this.isRight = true
       } else {
         this.isWrong = true
+        this.$emit('wrong-drop')
       }
       setTimeout(() => {
         this.isRight = false
