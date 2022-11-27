@@ -1,79 +1,48 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
-  <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/sandbox">Sandbox</RouterLink>
-      </nav>
-  </header>
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
+  <footer>
+    <NavBar />
+  </footer>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+@font-face {
+  font-family: "Nunito-Regular";
+  src: local("Nunito"),
+    url('../src/assets/fonts/Nunito-Regular.ttf') format("truetype");
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+@font-face {
+  font-family: "Nunito-Bold";
+  src: local("Nunito"),
+    url('../src/assets/fonts/Nunito-Bold.ttf') format("truetype");
 }
 
-nav {
-  width: 100%;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
+@font-face {
+  font-family: "FuzzyBubbles-Regular";
+  src: local("FuzzyBubbles"),
+    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+@font-face {
+  font-family: "FuzzyBubbles-Bold";
+  src: local("FuzzyBubbles"),
+    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+main {
+  height: 100vh;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+footer {
+  position: sticky;
+  margin-top: 12rem;
+  bottom: 0;
 }
 </style>
