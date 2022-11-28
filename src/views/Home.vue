@@ -27,7 +27,7 @@ export default {
     name: "Sandbox",
     methods: {
         game() {
-            this.$router.push("/sandbox");
+            this.$router.push("/game");
         },
         about() {
             this.$router.push("/about");
@@ -79,6 +79,7 @@ export default {
   align-items: center;
   gap: 1rem;
   width: 80%;
+  max-width: 390px;
 }
 
 .cta__title {

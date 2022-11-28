@@ -1,5 +1,3 @@
-// vue component that is the header. it has a the goback button and a title
-
 <script setup>
 import GoBackVue from './GoBack.vue';
 </script>
@@ -7,7 +5,10 @@ import GoBackVue from './GoBack.vue';
 <template>
   <header>
     <GoBackVue :isGame="false" />
-    <h1>{{ title }}</h1>
+    <div header__container>
+        <h1>{{ title }}</h1>
+        <slot name="Button"></slot>
+    </div>
   </header>
 </template>
 
@@ -29,7 +30,11 @@ export default {
 <style scoped>
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header__container {
+    display: flex;
 }
 </style>

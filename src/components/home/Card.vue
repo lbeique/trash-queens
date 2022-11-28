@@ -62,6 +62,7 @@ export default {
         margin-top: 6rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         width: 90%;
+        max-width: 390px;
     }
 
     .yellow {
