@@ -34,6 +34,11 @@ header {
   align-items: flex-start;
 }
 
+h1 {
+    font-size: 2rem;
+    font-family: "FuzzyBubbles-Regular", sans-serif;
+}
+
 .header__container {
     display: flex;
 }

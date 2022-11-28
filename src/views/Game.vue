@@ -1,11 +1,11 @@
 <script setup>
 import Button from '../components/shared/Button.vue'
 import { RouterLink, RouterView } from 'vue-router'
-import GoBack from '../components/shared/GoBack.vue';
+import Header from '../components/shared/Header.vue';
 </script>
 
 <template>
-  <GoBack :isGame="false" />
+  <Header title="Start Game" />
   <RouterLink to="/GamePlay-Easy">
     <Button text="Easy Mode" variant="primary" @click="startGame" />
   </RouterLink>
