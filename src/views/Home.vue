@@ -7,7 +7,11 @@ import Scroll from '../components/shared/Scroll.vue';
 
 <template>
   <div class="center">
-    <Button text="Sandbox" variant="tutorial-alternate" @click="startGame"/>
+    <div class="cta">
+      <h2 class="cta__title">Join the Trash Queens</h2>
+      <Button text="Quick Play" variant="alternate" @click="startGame"/>
+      <p class="cta__text">The power to save the world is at your fingertips.</p>
+    </div>
     <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText" :buttonFunction="game" />
     <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red" :buttonText="resourceButtonText" :buttonFunction="resource" />
     <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText" :buttonFunction="about" />
@@ -58,10 +62,31 @@ export default {
 <style scoped>
 .center {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+}
+
+.cta__title {
+  font-size: 1.5rem;
+  font-family: "FuzzyBubbles-Bold", sans-serif;
+  text-align: center;
+}
+
+.cta__text {
+  font-size: 1.25rem;
+  font-family: "Nunito-Bold", sans-serif;
+  text-align: center;
 }
 </style>

@@ -37,14 +37,14 @@ export default {
     font-weight: 400;
     font-family: "Nunito-Bold", sans-serif;
     margin: 0;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     text-align: center;
     transition: all 0.2s;
 }
 
 .game-button:hover {
     transform: translateY(-0.2rem);
-    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
 }
 
 .game-button:active {

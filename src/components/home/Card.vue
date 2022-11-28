@@ -59,7 +59,7 @@ export default {
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
-        margin-top: 5rem;
+        margin-top: 6rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         width: 90%;
     }
