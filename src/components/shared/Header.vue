@@ -37,6 +37,7 @@ export default {
     align-items: flex-start;
     width: 100%;
     gap: 1rem;
+    padding: 2rem 2rem 0 2rem;
 }
 
 h1 {
@@ -50,6 +51,5 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width:100%;
-
 }
 </style>
