@@ -50,6 +50,5 @@ h1 {
     align-items: center;
     justify-content: space-between;
     width:100%;
-
 }
 </style>
