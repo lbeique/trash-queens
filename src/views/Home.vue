@@ -2,12 +2,15 @@
 import Card from '../components/home/Card.vue';
 import Button from '../components/shared/Button.vue'
 import Scroll from '../components/shared/Scroll.vue';
-
+import HeroImage from '../components/home/heroImage.vue';
+import GameTitle from '../components/home/GameTitle.vue';
 </script>
 
 <template>
   <div class="center">
-    <Button text="Sandbox" variant="tutorial-alternate" @click="startGame"/>
+    <GameTitle />
+    <HeroImage />
+    <Button text="Sandbox" variant="tutorial-alternate" @click="startGame" />
     <Card :text="gameText" :title="gameTitle" :image="gameImage" :buttonText="gameButtonText" :buttonFunction="game" />
     <Scroll />
   </div>
@@ -33,7 +36,7 @@ export default {
         return {
           gameText: "Help the Trashy Queens sort through the wastes of the endless Trash Mountain!",
           gameTitle: "Explore the Game",
-          gameImage: new URL(`../assets/recycling-bin/paper-bin.svg`, import.meta.url).href,
+          gameImage: new URL(`../assets/recycling-bins/metal-bin.svg`, import.meta.url).href,
           gameButtonText: "The Game"
         };
     },
