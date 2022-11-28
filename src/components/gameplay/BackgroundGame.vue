@@ -27,13 +27,15 @@ export default {
         }
     },
     methods: {
-        changeBack() {
-            console.log("wtf", this.numWrong)
-            if (this.numWrong <= 3) {
+        changeBack(n) {
+            console.log("wtf", n)
+            if (n <= 3) {
                 this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[0]}`, import.meta.url).href
-            } else if (3 < this.numWrong < 7) {
+            } else if (3 < n < 7) {
                 this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[1]}`, import.meta.url).href
-            } else if (6 < this.numWrong) {
+            }
+
+            if (n >= 7) {
                 this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[2]}`, import.meta.url).href
             }
         }

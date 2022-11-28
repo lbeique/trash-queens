@@ -6,17 +6,28 @@ import Button from '../components/shared/Button.vue'
 <template>
     <div>
         <div class="container">
-            <FinalScoreVue :finalScore="1" />
+            <FinalScoreVue :finalScore="this.$route.params.id" />
             <br />
             <Button text="Share" variant="game"></Button>
             <br />
-            <Button text="Play Again" variant="alternate"></Button>
+            <Button text="Play Again" variant="alternate" @click="playAgain"></Button>
         </div>
     </div>
 
 </template>
 
 <script>
+export default {
+    name: "result",
+    props: [
+        "finalScore"
+    ],
+    methods: {
+        playAgain() {
+            this.$router.push("/game");
+        }
+    },
+};
 </script>
 
 <style scoped>

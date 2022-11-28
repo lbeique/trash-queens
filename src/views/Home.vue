@@ -12,56 +12,59 @@ import GameTitle from '../components/home/GameTitle.vue';
     <HeroImage />
     <div class="cta">
       <h2 class="cta__title">Join the Trash Queens</h2>
-      <Button text="Quick Play" variant="alternate" @click="startGame"/>
+      <Button text="Quick Play" variant="alternate" @click="startGame" />
       <p class="cta__text">The power to save the world is at your fingertips.</p>
     </div>
-    <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText" :buttonFunction="game" />
-    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red" :buttonText="resourceButtonText" :buttonFunction="education" />
-    <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText" :buttonFunction="about" />
+    <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText"
+      :buttonFunction="game" />
+    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red"
+      :buttonText="resourceButtonText" :buttonFunction="education" />
+    <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText"
+      :buttonFunction="about" />
     <Scroll />
   </div>
 </template>
 
 <script>
 export default {
-    name: "Home",
-    methods: {
-        startGame() {
-            this.$router.push("/gameplay-easy");
-        },
-        game() {
-            this.$router.push("/game");
-        },
-        about() {
-            this.$router.push("/about");
-        },
-        education() {
-            this.$router.push("/education");
-        },
+  name: "Home",
+  methods: {
+    startGame() {
+      this.$router.push("/gameplay-easy");
     },
-    computed: {},
-    props: {},
-    data() {
-        return {
-          gameText: "Help the Trashy Queens sort through the wastes of the endless Trash Mountain!",
-          gameTitle: "Explore the Game",
-          gameImage: new URL(`../assets/recycling-bins/plastic-bin.svg`, import.meta.url).href,
-          gameButtonText: "The Game",
-          resourceText: "Saving the world requires you to be vigilant. Learn real life skills to tackle the challenges around you!",
-          resourceTitle: "Expand your Knowledge",
-          resourceImage: new URL(`../assets/recycling-bins/organic-bin.svg`, import.meta.url).href,
-          resourceButtonText: "Learn More",
-          aboutText: "Come and meet the awesome developers who designed and built this game!",
-          aboutTitle: "Meat the Team",
-          aboutImage: new URL(`../assets/recycling-bins/metal-bin.svg`, import.meta.url).href,
-          aboutButtonText: "About Us",
-        };
+    game() {
+      this.$router.push("/game");
     },
-    components: {
+    about() {
+      this.$router.push("/about");
+    },
+    education() {
+      this.$router.push("/education");
+    },
+  },
+  computed: {},
+  props: {},
+  data() {
+    return {
+      gameText: "Help the Trashy Queens sort through the wastes of the endless Trash Mountain!",
+      gameTitle: "Explore the Game",
+      gameImage: new URL(`../assets/recycling-bins/plastic-bin.svg`, import.meta.url).href,
+      gameButtonText: "The Game",
+      resourceText: "Saving the world requires you to be vigilant. Learn real life skills to tackle the challenges around you!",
+      resourceTitle: "Expand your Knowledge",
+      resourceImage: new URL(`../assets/recycling-bins/organic-bin.svg`, import.meta.url).href,
+      resourceButtonText: "Learn More",
+      aboutText: "Come and meet the awesome developers who designed and built this game!",
+      aboutTitle: "Meat the Team",
+      aboutImage: new URL(`../assets/recycling-bins/metal-bin.svg`, import.meta.url).href,
+      aboutButtonText: "About Us",
+    };
+  },
+  components: {
     Button,
     Scroll,
     Card
-}
+  }
 };
 </script>
 

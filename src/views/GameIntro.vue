@@ -10,10 +10,10 @@ import Header from '../components/shared/Header.vue';
       <Button text="Tutorial" variant="tutorial-alternate" @click="startTutorial" />
     </template>
   </Header>
-  <!-- <RouterLink to="/GamePlay-Easy">
-    <Button text="Easy Mode" variant="primary" @click="startGame" />
+  <RouterLink to="/gamePlay-Easy">
+    <Button text="Easy Mode" variant="primary" />
   </RouterLink>
-  <RouterLink to="/GamePlay-Hard">
+  <!-- <RouterLink to="/GamePlay-Hard">
     <Button text="Hard Mode" variant="primary" @click="startGame" />
   </RouterLink> -->
 
@@ -21,21 +21,21 @@ import Header from '../components/shared/Header.vue';
 
 <script>
 export default {
-    name: "GameIntro",
-    methods: {
-        startTutorial() {
-            this.$router.push("/tutorial");
-        }
-    },
-    computed: {},
-    props: {},
-    data() {
-        return {};
-    },
-    components: { 
-      Header, 
-      Button 
+  name: "GameIntro",
+  methods: {
+    startTutorial() {
+      this.$router.push("/tutorial");
     }
+  },
+  computed: {},
+  props: {},
+  data() {
+    return {};
+  },
+  components: {
+    Header,
+    Button
+  }
 };
 </script>
 
