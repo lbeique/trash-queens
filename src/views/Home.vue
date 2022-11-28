@@ -16,7 +16,7 @@ import GameTitle from '../components/home/GameTitle.vue';
       <p class="cta__text">The power to save the world is at your fingertips.</p>
     </div>
     <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText" :buttonFunction="game" />
-    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red" :buttonText="resourceButtonText" :buttonFunction="resource" />
+    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red" :buttonText="resourceButtonText" :buttonFunction="education" />
     <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText" :buttonFunction="about" />
     <Scroll />
   </div>
@@ -26,14 +26,17 @@ import GameTitle from '../components/home/GameTitle.vue';
 export default {
     name: "Home",
     methods: {
+        startGame() {
+            this.$router.push("/gameplay-easy");
+        },
         game() {
             this.$router.push("/game");
         },
         about() {
             this.$router.push("/about");
         },
-        resource() {
-            this.$router.push("/resources");
+        education() {
+            this.$router.push("/education");
         },
     },
     computed: {},
