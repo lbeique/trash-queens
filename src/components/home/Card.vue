@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" :class="cardColor">
         <div class="card__image">
             <img :src="image" alt="Trash Queens are beautiful" />
         </div>
@@ -40,6 +40,11 @@ export default {
         buttonFunction: {
             type: Function,
             required: true
+        },
+        cardColor: {
+            type: String,
+            required: true,
+            default: "yellow"
         }
     },
     data() {
@@ -52,14 +57,21 @@ export default {
     .card {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-white);
-        border-radius: 1rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-        overflow: hidden;
+        background-color: "";
+        border-radius: 8px;
+    }
+
+    .yellow {
+        background-color: "#F7C932";
+    }
+
+    .red {
+        background-color: "#E05F4E";
+    }
+
+    .blue {
+        background-color: "#84A7F1";
     }
 
     .card__image {

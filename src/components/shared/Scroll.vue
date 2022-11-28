@@ -5,7 +5,7 @@ import Iconify from './Iconify.vue'
 <template>
     <div class="scroll" @click="scrollToTop">
         <p class="scroll__text">{{ text }}</p>
-        <Iconify iconName="icon-park-twotone:up-one" iconColor="#273D4E" iconHeight="16" />
+        <Iconify iconName="icon-park-twotone:up-one" iconColor="#273D4E" iconHeight="32" />
     </div>
 </template>
 
@@ -34,8 +34,9 @@ export default {
 .scroll {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
