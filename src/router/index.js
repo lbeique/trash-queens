@@ -5,24 +5,48 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('../views/Home.vue')
     },
     {
       path: '/game',
-      name: 'game',
+      name: 'Game',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Game.vue')
+      component: () => import('../views/GameIntro.vue')
     },
     {
-      path: '/resources',
-      name: 'resources',
+      path: '/education',
+      name: 'Education',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Resources.vue')
+      component: () => import('../views/Education.vue')
+    },
+    {
+      path: '/edu-why',
+      name: 'Why Recycle',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/EduWhy.vue')
+    },
+    {
+      path: '/edu-how',
+      name: 'How to Recycle',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/EduHow.vue')
+    },
+    {
+      path: '/edu-alt',
+      name: 'Alternatives to Recycling',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/EduAlt.vue')
     },
     {
       path: '/about',
@@ -31,8 +55,7 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/About.vue')
-    }
-    ,
+    },
     {
       path: '/sandbox',
       name: 'sandbox',
@@ -42,8 +65,8 @@ const router = createRouter({
       component: () => import('../views/Sandbox.vue')
     },
     {
-      path: '/gamePlay-Easy',
-      name: 'gamePlay-Easy',
+      path: '/gameplay-easy',
+      name: 'Gameplay Easy',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

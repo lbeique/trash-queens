@@ -8,7 +8,7 @@ import GameButtonMode from '../components/gameIntro/GameButtonMode.vue';
 <template>
   <Header title="Start Game">
     <template v-slot:Button>
-      <Button text="Start Game" variant="primary" @click="startGame" />
+      <Button text="Tutorial" variant="tutorial-alternate" @click="startTutorial" />
     </template>
   </Header>
 
@@ -25,10 +25,10 @@ import GameButtonMode from '../components/gameIntro/GameButtonMode.vue';
 
 <script>
 export default {
-    name: "Sandbox",
+    name: "GameIntro",
     methods: {
-        startGame() {
-            console.log("Starting game...");
+        startTutorial() {
+            this.$router.push("/tutorial");
         }
     },
     computed: {},
@@ -44,8 +44,5 @@ export default {
 </script>
 
 <style scoped>
-main {
-  display: flex;
-  justify-content: center;
-}
+
 </style>

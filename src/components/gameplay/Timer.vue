@@ -25,7 +25,7 @@
 <script>
 export default {
   props: {
-    finalScore: Number
+    "finalScore": Number
   },
   data() {
     return {

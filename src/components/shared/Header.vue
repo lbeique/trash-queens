@@ -5,8 +5,11 @@ import GoBack from './GoBack.vue';
 <template>
     <div class="header">
         <GoBack :isGame="false" />
-        <div header__container>
-            <h1>{{ title }}</h1>
+        <div class="header__container">
+            <div header__title>
+                <h1>{{ title }}</h1>
+            </div>
+            
             <slot name="Button"></slot>
         </div>
     </div>
@@ -32,6 +35,8 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
 }
 
 h1 {
@@ -41,5 +46,10 @@ h1 {
 
 .header__container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+
 }
 </style>
