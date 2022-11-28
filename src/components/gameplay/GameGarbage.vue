@@ -117,7 +117,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 9.063rem;
+    /* width: 9.063rem; */
     height: 3.979rem;
 }
 
@@ -125,7 +125,8 @@ img {
     width: 100%;
     height: 100%;
     margin-bottom: 1rem;
-    z-index: 10;
+    z-index: 1;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 span {
@@ -136,7 +137,7 @@ span {
     color: black;
     padding: 1rem;
     height: 1.223rem;
-    font-family: "Fuzzy Bubbles", cursive;
+    font-family: "FuzzyBubbles-Regular", sans-serif;
     font-size: 1.063rem;
     font-weight: bold;
 }
