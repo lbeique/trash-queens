@@ -24,7 +24,7 @@ export default {
     ],
     methods: {
         playAgain() {
-            this.$router.push("/game");
+            this.$router.push("/gameplay-easy");
         }
     },
 };
