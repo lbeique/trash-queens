@@ -1,3 +1,6 @@
+<script setup>
+import Button from '../shared/Button.vue'
+</script>
 <template>
   <div class="overlay">
 
@@ -8,6 +11,8 @@
         <div class="promptButtons">
           <button class="stayBtn" @click="stayInGame">Keep Playing</button>
           <button class="leaveBtn" @click= "leaveGame">Leave</button>
+<!--          <Button text="Keep Playing" variant="game"  @click="stayInGame" class="stayBtn"></Button>-->
+<!--          <Button text="Leave" variant="alternate" @click= "leaveGame" class="leaveBtn"></Button>-->
         </div>
       </span>
   </div>
@@ -95,7 +100,6 @@ export default {
 
 .stayBtn{
   background-color: #273D4E;
-
 }
 
 </style>
