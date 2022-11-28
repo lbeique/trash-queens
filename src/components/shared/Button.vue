@@ -99,8 +99,13 @@ export default {
 }
 
 .tutorial {
+    font-family: "Nunito-Regular", sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 0;
     background-color: #F7C932;
     color: #273D4E;
+    border-radius: 4px;
+    width: 9.5rem;
 }
 
 .tutorial:hover {

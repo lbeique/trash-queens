@@ -12,6 +12,11 @@ import GameButtonMode from '../components/gameIntro/GameButtonMode.vue';
     </template>
   </Header>
 
+  <div class="gameIntro__content">
+    <h2>So you think you can recycle?</h2>
+    <p>Try your hand at our game by playing through different levels in order to test your knowledge!</p>
+  </div>
+
   <RouterLink style="text-decoration: none;" to="/gamePlay-Easy">
     <GameButtonMode :gameMode="'easy'" @click="startGame" />
   </RouterLink>
@@ -44,5 +49,29 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  padding: 2rem;
+}
 
+.gameIntro__content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  row-gap: 1rem;
+  margin: 3rem 2rem;
+}
+
+h2 {
+  font-family: "FuzzyBubbles-Regular", sans-serif;
+  color: #5ab4ab;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+p {
+  font-family: "Nunito-Regular", sans-serif;
+  color: black;
+  font-size: 0.938rem;
+  text-align: center;
+}
 </style>

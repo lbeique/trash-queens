@@ -1,20 +1,19 @@
 <script setup>
-import Button from '../components/shared/Button.vue'
+import Button from '../shared/Button.vue'
+import Tracker from './Tracker.vue';
 </script>
 
 <template>
     <div class="card">
-        <div class="card__content">
-            <h1 class="card__content__title">{{ title }}</h1>
-            <img class="card__content__image" :src="imageSource" alt="image">
-            <p class="card__content__text">{{ text }}</p>
+        <h1 class="card__content__title">Tutorial</h1>
+        <img class="card__content__image" :src="imageSource" alt="image">
+        <p class="card__content__text">{{ text }}</p>
+        <div class="card__buttons">
+            <Button :text="backText" variant="tutorial" @click="backClick" />
+            <Button :text="forwardText" variant="tutorial" @click="forwardClick" />
         </div>
-        <Button :text="backText" variant="tutorial" @click="backClick" />
-        <Button :text="forwardText" variant="tutorial" @click="forwardClick" />
         <div class="card__tracker">
-            <div class="card__tracker__dot" :class="isActive"></div>
-            <div class="card__tracker__dot" :class="isActive"></div>
-            <div class="card__tracker__dot" :class="isActive"></div>
+            <Tracker :trackerPosition="currentStep" />
         </div>
     </div>
 </template> 
@@ -25,10 +24,6 @@ export default {
     methods: {},
     computed: {},
     props: {
-        title: {
-            type: String,
-            required: true
-        },
         text: {
             type: String,
             required: true
@@ -53,16 +48,17 @@ export default {
             type: Function,
             required: true
         },
-        isActive: {
-            type: String,
+        currentStep: {
+            type: Number,
             required: true
-        }
+        },
     },
     data() {
         return {};
     },
     components: {
-        Button
+        Button,
+        Tracker
     }
 };
 </script>
@@ -70,16 +66,12 @@ export default {
 <style scoped>
 .card {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    position: relative;
+    background-color: #273D4E;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 .card__content {
@@ -92,6 +84,7 @@ export default {
 }
 
 .card__content__title {
+    color: #F5F9E9;
     font-size: 1.5rem;
     font-family: "FuzzyBubbles-Bold", sans-serif;
 }
@@ -103,6 +96,7 @@ export default {
 }
 
 .card__content__text {
+    color: #F5F9E9;
     font-size: 1rem;
     font-family: "Nunito-Regular", sans-serif;
 }
