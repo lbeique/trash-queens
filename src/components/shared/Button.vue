@@ -146,7 +146,7 @@ export default {
 }
 
 .education:hover {
-    background-color: #F7C932;
+    background-color: #F5F9E9;
     color: #273D4E;
 }
 
