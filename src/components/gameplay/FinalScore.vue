@@ -27,5 +27,6 @@ export default {
 span {
     font-size: 2rem;
     font-weight: 800;
+    font-family: "Nunito-Bold", sans-serif;
 }
 </style>

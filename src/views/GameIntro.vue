@@ -17,10 +17,10 @@ import GameButtonMode from '../components/gameIntro/GameButtonMode.vue';
     <p>Try your hand at our game by playing through different levels in order to test your knowledge!</p>
   </div>
 
-  <RouterLink style="text-decoration: none;" to="/GamePlay-Easy">
+  <RouterLink style="text-decoration: none;" to="/gamePlay-Easy">
     <GameButtonMode :gameMode="'easy'" @click="startGame" />
   </RouterLink>
-  <RouterLink style="text-decoration: none;" to="/GamePlay-Hard">
+  <RouterLink style="text-decoration: none;" to="/gamePlay-Hard">
     <GameButtonMode :gameMode="'hard'" @click="startGame" />
   </RouterLink>
 

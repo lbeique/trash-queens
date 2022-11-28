@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
- </template>
+  </template>
 
   <!-- </div> -->
 </template>
@@ -52,7 +52,6 @@ export default {
 </script>
 
 <style scoped>
-
 [class^=gameMode__button] {
   display: flex;
   align-items: flex-end;
@@ -62,14 +61,14 @@ export default {
   margin-top: 2rem;
 }
 
-.gameMode__button--left{
-   align-self: flex-start;
-   transform: translateX(-2.5rem);
+.gameMode__button--left {
+  align-self: flex-start;
+  transform: translateX(-2.5rem);
 }
 
-.gameMode__button--right{
-   align-self: flex-end;
-   transform: translateX(2.5rem);
+.gameMode__button--right {
+  align-self: flex-end;
+  transform: translateX(2.5rem);
 }
 
 [class^="gameMode__container"] {
@@ -125,7 +124,7 @@ export default {
 
 
 /* EASY MODE CONTENT */
-.gameMode__content--easy > h1 {
+.gameMode__content--easy>h1 {
   display: flex;
   width: 90%;
   justify-content: end;
@@ -133,52 +132,52 @@ export default {
   color: #F7C932;
 }
 
-.gameMode__content--easy > h1::after{
-    content: 'EASY';
-    -webkit-text-stroke: 9px #5ab4ab;
-    color: #5ab4ab;
-    position: absolute;
-    z-index: -1
+.gameMode__content--easy>h1::after {
+  content: 'EASY';
+  -webkit-text-stroke: 9px #5ab4ab;
+  color: #5ab4ab;
+  position: absolute;
+  z-index: -1
 }
 
 
-.gameMode__content--easy > h3{
-    display: flex;
-    width: 90%;
-    justify-content: end;
-    color: #F7C932;
+.gameMode__content--easy>h3 {
+  display: flex;
+  width: 90%;
+  justify-content: end;
+  color: #F7C932;
 }
 
-.gameMode__content--easy > p{
-    color: white;
+.gameMode__content--easy>p {
+  color: white;
 }
 
 /* HARD MODE CONTENT */
-.gameMode__content--hard > h1 {
+.gameMode__content--hard>h1 {
   display: flex;
   justify-content: end;
   transform: translateY(-3.5rem);
   color: #5ab4ab;
 }
 
-.gameMode__content--hard > h1::after {
-    content: 'HARD';
-    -webkit-text-stroke: 9px #F7C932;
-    color: #F7C932;
-    position: absolute;
-    z-index: -1
+.gameMode__content--hard>h1::after {
+  content: 'HARD';
+  -webkit-text-stroke: 9px #F7C932;
+  color: #F7C932;
+  position: absolute;
+  z-index: -1
 }
 
-.gameMode__content--hard > h3{
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    color: #5ab4ab;
-    
+.gameMode__content--hard>h3 {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  color: #5ab4ab;
+
 }
 
-.gameMode__content--hard > p{
-    color: black;
+.gameMode__content--hard>p {
+  color: black;
 }
 
 
