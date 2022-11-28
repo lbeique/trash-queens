@@ -7,11 +7,11 @@ import Tutorial from '../components/tutorial/Tutorial.vue';
 <template>
     <div class="page">
         <GoBack />
-        <Tutorial v-if="position == 1" :currentStep="position" text="Do your best!" :imageSource="imgUrl"
+        <Tutorial v-if="position == 1" :currentStep="position" :text="firstText" :imageSource="firstImgUrl"
             backText="Return" forwardText="Next" :backClick="handleReturn" :forwardClick="handlePageTwo" />
-        <Tutorial v-if="position == 2" :currentStep="position" text="Do your best!" :imageSource="imgUrl"
+        <Tutorial v-if="position == 2" :currentStep="position" :text="secondText" :imageSource="secondImgUrl"
             backText="Previous" forwardText="Next" :backClick="handlePageOne" :forwardClick="handlePageThree" />
-        <Tutorial v-if="position == 3" :currentStep="position" text="Do your best!" :imageSource="imgUrl"
+        <Tutorial v-if="position == 3" :currentStep="position" :text="thirdText" :imageSource="thirdImgUrl"
             backText="Previous" forwardText="Start Game" :backClick="handlePageTwo" :forwardClick="handleGameStart" />
     </div>
 </template>
@@ -41,7 +41,12 @@ export default {
     data() {
         return {
             position: 1,
-            imgUrl: new URL("https://images.unsplash.com/photo-1525695230005-efd074980869?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80").href
+            firstText: "In this game, you will be helping the Trash Queens by sorting and recycling trash.",
+            firstImgUrl: new URL("https://images.unsplash.com/photo-1525695230005-efd074980869?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80").href,
+            secondText: "The goal of the game is to sort as much trash as you can into one of 6 recycling bins. You can do this by dragging and dropping the trash into a bin.",
+            secondImgUrl: new URL("https://images.unsplash.com/photo-1525695230005-efd074980869?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80").href,
+            thirdText: "You will be given a score based on how much trash you sort correctly in under a minute. Your score will be displayed at the end of the game. Good luck!",
+            thirdImgUrl: new URL("https://images.unsplash.com/photo-1525695230005-efd074980869?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80").href,
         }
     },
     components: {
