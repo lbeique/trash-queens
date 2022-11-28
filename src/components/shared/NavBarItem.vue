@@ -7,7 +7,7 @@ import Iconify from './Iconify.vue';
 <template>
     <div class="navbar-item">
         <RouterLink :to=navTo class="navbar-link">
-            <Iconify :iconName=navIcon :iconColor=navColor :iconHeight="40" />
+            <Iconify :iconName=navIcon :iconColor=navColor :iconHeight=40 />
             {{navName}}
         </RouterLink>
     </div>

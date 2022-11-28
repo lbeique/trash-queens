@@ -1,9 +1,11 @@
 <script setup>
 import Button from '../components/shared/Button.vue'
 import { RouterLink, RouterView } from 'vue-router'
+import GoBack from '../components/shared/GoBack.vue';
 </script>
 
 <template>
+  <GoBack :isGame="false" />
   <RouterLink to="/GamePlay-Easy">
     <Button text="Easy Mode" variant="primary" @click="startGame" />
   </RouterLink>
@@ -15,17 +17,18 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <script>
 export default {
-  name: "Sandbox",
-  methods: {
-    startGame() {
-      console.log("Starting game...");
-    }
-  },
-  computed: {},
-  props: {},
-  data() {
-    return {};
-  }
+    name: "Sandbox",
+    methods: {
+        startGame() {
+            console.log("Starting game...");
+        }
+    },
+    computed: {},
+    props: {},
+    data() {
+        return {};
+    },
+    components: { GoBack }
 };
 </script>
 
