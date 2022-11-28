@@ -24,7 +24,7 @@ import GameTitle from '../components/home/GameTitle.vue';
 
 <script>
 export default {
-    name: "Sandbox",
+    name: "Home",
     methods: {
         game() {
             this.$router.push("/game");

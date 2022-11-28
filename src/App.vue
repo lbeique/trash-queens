@@ -25,7 +25,7 @@ import NavBar from './components/shared/NavBar.vue';
 @font-face {
   font-family: "FuzzyBubbles-Regular";
   src: local("FuzzyBubbles"),
-    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
+    url('../src/assets/fonts/FuzzyBubbles-Regular.ttf') format("truetype");
 }
 
 @font-face {

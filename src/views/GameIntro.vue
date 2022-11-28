@@ -7,24 +7,24 @@ import Header from '../components/shared/Header.vue';
 <template>
   <Header title="Start Game">
     <template v-slot:Button>
-      <Button text="Start Game" variant="primary" @click="startGame" />
+      <Button text="Tutorial" variant="tutorial-alternate" @click="startTutorial" />
     </template>
   </Header>
-  <RouterLink to="/GamePlay-Easy">
+  <!-- <RouterLink to="/GamePlay-Easy">
     <Button text="Easy Mode" variant="primary" @click="startGame" />
   </RouterLink>
   <RouterLink to="/GamePlay-Hard">
     <Button text="Hard Mode" variant="primary" @click="startGame" />
-  </RouterLink>
+  </RouterLink> -->
 
 </template>
 
 <script>
 export default {
-    name: "Sandbox",
+    name: "GameIntro",
     methods: {
-        startGame() {
-            console.log("Starting game...");
+        startTutorial() {
+            this.$router.push("/tutorial");
         }
     },
     computed: {},
@@ -40,8 +40,5 @@ export default {
 </script>
 
 <style scoped>
-main {
-  display: flex;
-  justify-content: center;
-}
+
 </style>

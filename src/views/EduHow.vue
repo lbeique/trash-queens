@@ -5,19 +5,13 @@ import Header from '../components/shared/Header.vue';
 </script>
 
 <template>
-  <Header title="About Us" />
-  <!-- <RouterLink to="/GamePlay-Easy">
-    <Button text="Easy Mode" variant="primary" @click="startGame" />
-  </RouterLink>
-  <RouterLink to="/GamePlay-Hard">
-    <Button text="Hard Mode" variant="primary" @click="startGame" />
-  </RouterLink> -->
+  <Header title="How to Recycle?" />
 
 </template>
 
 <script>
 export default {
-    name: "About",
+    name: "EduHow",
     methods: {
 
     },

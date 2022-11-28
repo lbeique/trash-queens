@@ -34,7 +34,6 @@ export default {
     cursor: pointer;
     display: inline-block;
     font-size: 1.5rem;
-    font-weight: 400;
     font-family: "Nunito-Bold", sans-serif;
     margin: 0;
     padding: 1rem 2rem;
@@ -116,8 +115,12 @@ export default {
 }
 
 .tutorial-alternate {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
     background-color: #273D4E;
     color: #F5F9E9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+    border-radius: 4px;
 }
 
 .tutorial-alternate:hover {
@@ -126,6 +129,23 @@ export default {
 }
 
 .tutorial-alternate:active {
+    background-color: #5AB4AB;
+    color: #F5F9E9;
+}
+
+.education {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #273D4E;
+    color: #F5F9E9;
+}
+
+.education:hover {
+    background-color: #F7C932;
+    color: #273D4E;
+}
+
+.education:active {
     background-color: #5AB4AB;
     color: #F5F9E9;
 }
