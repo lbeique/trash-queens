@@ -20,7 +20,7 @@ import GameTrashMountain from '../components/gameplay/GameTrashMountain.vue';
   </div>
   <GameGarbage :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" />
   <GameTrashMountain ref="gameTrashMountain" />
-  <!-- <Hint garbage-name="apple" garbage-category="organics" /> -->
+  <!-- <Hint garbage-name="apple"  garbage-category="organics" /> -->
   <ScoreVue :currentScore="0"></ScoreVue>
   <FinalScoreVue :finalScore="0"></FinalScoreVue>
   <Timer></Timer>
