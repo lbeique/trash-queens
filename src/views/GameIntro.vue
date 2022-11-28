@@ -40,5 +40,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .header {
+    padding: 2rem;
+  }
 </style>
