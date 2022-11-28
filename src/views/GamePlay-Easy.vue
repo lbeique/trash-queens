@@ -11,8 +11,9 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 <template>
     <div class="gameContainer">
         <ScoreVue :currentScore="score" class="topScore" />
-        <BackgroundGameVue :numWrong="numWrong" ref="backgroundGame" />
-        <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums" />
+        <BackgroundGameVue ref="backgroundGame" />
+        <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums"
+            :finalScore="score" />
         <TimerVue class="timer" :finalScore="score" />
         <div class="grassArea">
             <div class="recycleBins__grid">
@@ -29,7 +30,7 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 
 <script>
 export default {
-    name: "Gameplay",
+    name: "gameplay-Easy",
     methods: {
         setCurrentGarbage(garbage) {
             this.currentGarbage = garbage
@@ -37,7 +38,7 @@ export default {
         nextGarbage() {
             this.$refs.gameGarbage.getRandomGarbage()
             this.rounds++
-            console.log("add round", this.rounds)
+            // console.log("add round", this.rounds)
         },
         wrongDrop() {
             this.$refs.gameTrashMountain.moveMountainY()

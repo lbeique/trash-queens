@@ -15,17 +15,18 @@ export default {
             console.log('move up')
             if (this.counter < 9) {
                 this.counter++
-                this.translateRem = this.translateRem - 1.4
+                this.translateRem = this.translateRem - 1.3
                 this.$emit("wrongItems", this.counter)
                 this.setWrongNums(this.counter)
             } else {
-
+                this.$router.push(`/result/${this.finalScore}`)
             }
         }
     },
     computed: {},
     props: {
-        setWrongNums: Function
+        setWrongNums: Function,
+        finalScore: Number
     },
     data() {
         return {
