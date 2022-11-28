@@ -39,5 +39,6 @@ main {
   flex-direction: column;
   align-items: center;
   margin-bottom: 5.5rem;
+  overflow-x:hidden;
 }
 </style>
