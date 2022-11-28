@@ -1,5 +1,5 @@
 <script setup>
-import Button from '../components/GameButton.vue'
+import Button from '../components/shared/Button.vue'
 </script>
 
 <template>

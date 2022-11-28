@@ -8,7 +8,9 @@ import Scroll from '../components/shared/Scroll.vue';
 <template>
   <div class="center">
     <Button text="Sandbox" variant="tutorial-alternate" @click="startGame"/>
-    <Card :text="gameText" :title="gameTitle" :image="gameImage" :buttonText="gameButtonText" :buttonFunction="game" />
+    <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText" :buttonFunction="game" />
+    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red" :buttonText="resourceButtonText" :buttonFunction="resource" />
+    <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText" :buttonFunction="about" />
     <Scroll />
   </div>
 </template>
@@ -23,7 +25,7 @@ export default {
         about() {
             this.$router.push("/about");
         },
-        resources() {
+        resource() {
             this.$router.push("/resources");
         },
     },
@@ -33,8 +35,16 @@ export default {
         return {
           gameText: "Help the Trashy Queens sort through the wastes of the endless Trash Mountain!",
           gameTitle: "Explore the Game",
-          gameImage: new URL(`../assets/recycling-bin/paper-bin.svg`, import.meta.url).href,
-          gameButtonText: "The Game"
+          gameImage: new URL(`../assets/recycling-bins/plastic-bin.svg`, import.meta.url).href,
+          gameButtonText: "The Game",
+          resourceText: "Saving the world requires you to be vigilant. Learn real life skills to tackle the challenges around you!",
+          resourceTitle: "Expand your Knowledge",
+          resourceImage: new URL(`../assets/recycling-bins/organic-bin.svg`, import.meta.url).href,
+          resourceButtonText: "Learn More",
+          aboutText: "Come and meet the awesome developers who designed and built this game!",
+          aboutTitle: "Meat the Team",
+          aboutImage: new URL(`../assets/recycling-bins/metal-bin.svg`, import.meta.url).href,
+          aboutButtonText: "About Us",
         };
     },
     components: {

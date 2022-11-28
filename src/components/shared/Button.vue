@@ -35,6 +35,7 @@ export default {
     display: inline-block;
     font-size: 1.5rem;
     font-weight: 400;
+    font-family: "Nunito-Bold", sans-serif;
     margin: 0;
     padding: 1rem 3rem;
     text-align: center;
