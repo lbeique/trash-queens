@@ -78,7 +78,7 @@ export default {
 <style scoped>
 .topScore {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
 }
 
 .trashMountain {
@@ -120,7 +120,7 @@ export default {
 }
 
 .garbage {
-    margin: 10%
+    margin: 20%;
 }
 
 .hint {

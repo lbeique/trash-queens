@@ -6,7 +6,7 @@ import NavBar from './components/shared/NavBar.vue';
   <main>
     <RouterView />
   </main>
-  <NavBar />
+  <NavBar class="navbarStyles"/>
 </template>
 
 <style scoped>
@@ -41,4 +41,8 @@ main {
   margin-bottom: 5.5rem;
   overflow-x:hidden;
 }
+.navbarStyles{
+  z-index:200;
+}
+
 </style>

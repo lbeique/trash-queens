@@ -52,11 +52,6 @@ export default {
 
 
 <style scoped>
-.promptParent {
-  z-index: 9;
-  /*margin-top: 4rem;*/
-  /*WHY?? (from yasmina to herself)*/
-}
 
 .hintChild {
   position: absolute;
@@ -82,12 +77,13 @@ export default {
 .hintX {
   top: 0;
   right: 0;
-
   height: 60px;
   width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+
   z-index: 20;
 }
 

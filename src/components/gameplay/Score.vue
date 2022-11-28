@@ -23,7 +23,7 @@ export default {
     width: 100vw;
     min-height: 5vh;
     background-color: #F5F9E9;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px ;
     box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;

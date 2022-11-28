@@ -4,15 +4,11 @@ import Button from '../components/shared/Button.vue'
 </script>
 
 <template>
-    <div>
         <div class="container">
             <FinalScoreVue :finalScore="this.$route.params.id" />
-            <br />
-            <Button text="Share" variant="game"></Button>
-            <br />
-            <Button text="Play Again" variant="alternate" @click="playAgain"></Button>
+            <Button text="Share" variant="game" class="btn"></Button>
+            <Button text="Play Again" variant="alternate" @click="playAgain" class="btn"></Button>
         </div>
-    </div>
 
 </template>
 
@@ -24,7 +20,7 @@ export default {
     ],
     methods: {
         playAgain() {
-            this.$router.push("/game");
+            this.$router.push("/gameplay-easy");
         }
     },
 };
@@ -32,9 +28,13 @@ export default {
 
 <style scoped>
 .container {
-    height: 80vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.btn{
+  margin:10px 0;
 }
 </style>
