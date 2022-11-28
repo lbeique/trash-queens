@@ -1,37 +1,37 @@
 <script setup>
-import GoBackVue from './GoBack.vue';
+import GoBack from './GoBack.vue';
 </script>
 
 <template>
-  <header>
-    <GoBackVue :isGame="false" />
-    <div header__container>
-        <h1>{{ title }}</h1>
-        <slot name="Button"></slot>
+    <div class="header">
+        <GoBack :isGame="false" />
+        <div header__container>
+            <h1>{{ title }}</h1>
+            <slot name="Button"></slot>
+        </div>
     </div>
-  </header>
 </template>
 
 <script>
 export default {
-  name: "Header",
-  props: {
-    title: {
-      type: String,
-      required: true
+    name: "Header",
+    props: {
+        title: {
+            type: String,
+            required: true
+        }
+    },
+    components: {
+        GoBack
     }
-  },
-  components: { 
-    GoBackVue 
-}
 };
 </script>
 
 <style scoped>
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 h1 {

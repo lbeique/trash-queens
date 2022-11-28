@@ -5,7 +5,11 @@ import Header from '../components/shared/Header.vue';
 </script>
 
 <template>
-  <Header title="Start Game" />
+  <Header title="Start Game">
+    <template v-slot:Button>
+      <Button text="Start Game" variant="primary" @click="startGame" />
+    </template>
+  </Header>
   <RouterLink to="/GamePlay-Easy">
     <Button text="Easy Mode" variant="primary" @click="startGame" />
   </RouterLink>
@@ -28,7 +32,10 @@ export default {
     data() {
         return {};
     },
-    components: { GoBack }
+    components: { 
+      Header, 
+      Button 
+    }
 };
 </script>
 

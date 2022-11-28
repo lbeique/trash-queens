@@ -1,5 +1,5 @@
 <script setup>
-import ExitGamePrompt from '../gameplay/ExitGamePrompt.vue'
+import ExitGamePrompt from '../gameplay/ExitGamePrompt.vue';
 </script>
 
 <template>
