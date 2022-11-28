@@ -2,6 +2,7 @@
 import Button from '../components/shared/Button.vue'
 import { RouterLink, RouterView } from 'vue-router'
 import Header from '../components/shared/Header.vue';
+import GameButtonMode from '../components/gameIntro/GameButtonMode.vue';
 </script>
 
 <template>
@@ -10,12 +11,15 @@ import Header from '../components/shared/Header.vue';
       <Button text="Start Game" variant="primary" @click="startGame" />
     </template>
   </Header>
-  <RouterLink to="/GamePlay-Easy">
-    <Button text="Easy Mode" variant="primary" @click="startGame" />
+
+  <RouterLink style="text-decoration: none;" to="/GamePlay-Easy">
+    <GameButtonMode :gameMode="'easy'" @click="startGame"/>
   </RouterLink>
-  <RouterLink to="/GamePlay-Hard">
-    <Button text="Hard Mode" variant="primary" @click="startGame" />
+  <RouterLink style="text-decoration: none;" to="/GamePlay-Hard">
+    <GameButtonMode :gameMode="'hard'" @click="startGame"/>
   </RouterLink>
+  
+
 
 </template>
 
