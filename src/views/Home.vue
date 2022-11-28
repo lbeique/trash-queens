@@ -2,11 +2,14 @@
 import Card from '../components/home/Card.vue';
 import Button from '../components/shared/Button.vue'
 import Scroll from '../components/shared/Scroll.vue';
-
+import HeroImage from '../components/home/heroImage.vue';
+import GameTitle from '../components/home/GameTitle.vue';
 </script>
 
 <template>
   <div class="center">
+    <GameTitle />
+    <HeroImage />
     <div class="cta">
       <h2 class="cta__title">Join the Trash Queens</h2>
       <Button text="Quick Play" variant="alternate" @click="startGame"/>
