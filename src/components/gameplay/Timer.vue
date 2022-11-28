@@ -15,7 +15,8 @@
       </svg>
       <span id="base-timer-label" class="base-timer__label">
         <!-- Remaining time label -->
-        {{ startTimer() }}
+        <!-- {{ startTimer() }} -->
+        {{ formatTimeLeft(timeLeft) }}
       </span>
     </div>
   </div>
@@ -29,9 +30,9 @@ export default {
   },
   data() {
     return {
-      TIME_LIMIT: 61,
+      TIME_LIMIT: 60,
       timePassed: 0,
-      timeLeft: 61,
+      timeLeft: 60,
       timerInterval: null,
       FULL_DASH_ARRAY: 283
     }
@@ -39,11 +40,26 @@ export default {
   computed: {
     goToResults() {
       // console.log(this.finalScore)
-      clearInterval()
+      clearInterval(this.timerInterval)
       this.$router.push(`/result/${this.finalScore}`)
     }
   },
   methods: {
+    formatTimeLeft(time) {
+      // The largest round integer less than or equal to the result of time divided being by 60.
+      const minutes = Math.floor(time / 60);
+
+      // Seconds are the remainder of the time divided by 60 (modulus operator)
+      let seconds = time % 60;
+
+      // If the value of seconds is less than 10, then display seconds with a leading zero
+      if (seconds < 10) {
+        seconds = `0${seconds}`;
+      }
+
+      // The output in MM:SS format
+      return `${minutes}:${seconds}`;
+    },
     // Divides time left by the defined time limit.
     calculateTimeFraction() {
       const rawTimeFraction = this.timeLeft / this.TIME_LIMIT;
@@ -70,16 +86,15 @@ export default {
           this.timeLeft = this.TIME_LIMIT - this.timePassed;
 
           // The time left label is updated
-          document.getElementById("base-timer-label").innerHTML = this.timeLeft;
+          document.getElementById("base-timer-label").innerHTML = formatTimeLeft(this.timeLeft);
           this.setCircleDasharray();
         }
-
-        // this.timeLeft = this.TIME_LIMIT - this.timePassed;
-
-        // // The time left label is updated
-        // document.getElementById("base-timer-label").innerHTML = this.timeLeft;
       }, 1000)
+
     }
+  },
+  beforeMount() {
+    this.startTimer()
   }
 };
 </script>
