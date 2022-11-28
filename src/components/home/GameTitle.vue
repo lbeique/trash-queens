@@ -23,6 +23,7 @@ export default{
 .gameTitle__container{
     width: 100%;
     height: 9.188rem;
+    transform: translateY(-.5rem)
 }
 
 img{
