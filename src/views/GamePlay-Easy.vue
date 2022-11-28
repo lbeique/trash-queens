@@ -120,7 +120,7 @@ export default {
 }
 
 .garbage {
-    margin: 10%
+    margin: 20%;
 }
 
 .hint {
