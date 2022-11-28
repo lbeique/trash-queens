@@ -4,7 +4,7 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-    <Icon :icon='iconName' :color="iconColor" :height="iconHeight" :width="iconWidth" />
+    <Icon :icon='iconName' :color="iconColor" :height="iconHeight" />
 </template>
 
 <script>
@@ -20,10 +20,6 @@ export default {
             required: true
         },
         iconHeight: {
-            type: Number,
-            required: true
-        },
-        iconWidth: {
             type: Number,
             required: true
         }

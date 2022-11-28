@@ -35,6 +35,9 @@ import NavBar from './components/shared/NavBar.vue';
 }
 
 main {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5.5rem;
 }
 </style>
