@@ -5,20 +5,24 @@ import TimerVue from '../components/gameplay/Timer.vue';
 import GameRecycleBinsVue from '../components/gameplay/GameRecycleBins.vue';
 import GameGarbageVue from '../components/gameplay/GameGarbage.vue';
 import HintVue from '../components/gameplay/Hint.vue';
+import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 </script>
 
 <template>
     <div class="gameContainer">
-        <ScoreVue :currentScore="0" class="topScore" />
-        <BackgroundGameVue :numWrong="3" />
-        <TimerVue class="timer" />
-        <div class="recycleBins__grid">
-            <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
-                @next-garbage="nextGarbage" />
+        <ScoreVue :currentScore="score" class="topScore" />
+        <BackgroundGameVue :numWrong="numWrong" ref="backgroundGame" />
+        <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums" />
+        <TimerVue class="timer" :finalScore="score" />
+        <div class="grassArea">
+            <div class="recycleBins__grid">
+                <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin"
+                    :currentGarbage="currentGarbage" @next-garbage="nextGarbage" @wrong-drop="wrongDrop" />
+            </div>
+            <GameGarbageVue :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" class="garbage" />
+            <HintVue :garbage-name="currentGarbage.garbageName" :garbage-category="currentGarbage.garbageCategory"
+                class="hint" />
         </div>
-        <GameGarbageVue :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" class="garbage" />
-        <HintVue :garbage-name="currentGarbage.garbageName" :garbage-category="currentGarbage.garbageCategory"
-            class="hint" />
     </div>
 
 </template>
@@ -32,9 +36,24 @@ export default {
         },
         nextGarbage() {
             this.$refs.gameGarbage.getRandomGarbage()
+            this.rounds++
+            console.log("add round", this.rounds)
+        },
+        wrongDrop() {
+            this.$refs.gameTrashMountain.moveMountainY()
+            console.log("ahhh", this.numWrong)
+            this.$refs.backgroundGame.changeBack(this.numWrong)
+        },
+        setWrongNums(counter) {
+            this.numWrong = counter
+            // console.log("this is in the gameplay", this.numWrong)
         }
     },
-    computed: {},
+    computed: {
+        score() {
+            return this.rounds - this.numWrong
+        }
+    },
     props: {},
     data() {
         return {
@@ -46,7 +65,9 @@ export default {
                 'paper',
                 'e-waste',
                 'plastic'
-            ]
+            ],
+            numWrong: 0,
+            rounds: 0
         };
     }
 }
@@ -57,6 +78,11 @@ export default {
 .topScore {
     position: fixed;
     z-index: 1;
+}
+
+.trashMountain {
+    position: absolute;
+    top: 40%;
 }
 
 .timer {
@@ -71,7 +97,17 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* z-index: -5; */
     /* overflow-y: hidden; */
+}
+
+.grassArea {
+    background-color: #82CE9B;
+    width: 100%;
+    height: 100%;
+
+    /* z-index: 1; */
+
 }
 
 .recycleBins__grid {
@@ -88,8 +124,8 @@ export default {
 
 .hint {
     position: absolute;
-    z-index: 1;
-    bottom: 15%;
+    z-index: 3;
+    bottom: 25%;
     left: 10%;
 }
 </style>

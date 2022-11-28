@@ -76,6 +76,7 @@ export default {
   align-items: center;
   justify-content: center;
   font-family: "Nunito-Bold", sans-serif;
+  /* z-index: 10000; */
 }
 
 .hintX {

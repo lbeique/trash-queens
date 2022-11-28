@@ -24,13 +24,21 @@
 
 <script>
 export default {
+  props: {
+    "finalScore": INTEGER
+  },
   data() {
     return {
-      TIME_LIMIT: 61,
+      TIME_LIMIT: 5,
       timePassed: 0,
       timeLeft: this.TIME_LIMIT,
       timerInterval: null,
       FULL_DASH_ARRAY: 283
+    }
+  },
+  computed: {
+    goToResults() {
+      this.$router.push({ path: `/result/${this.finalScore}` })
     }
   },
   methods: {
@@ -38,7 +46,8 @@ export default {
       this.timerInterval = setInterval(() => {
 
         if (this.timeLeft == 0) {
-          this.timePassed = 0;
+          goToResults()
+          // this.timePassed = 0;
         } else {
           // The amount of time passed increments by one
           this.timePassed = this.timePassed += 1;
@@ -81,7 +90,7 @@ export default {
 /* Removes SVG styling that would hide the time label */
 .base-timer__circle {
   /* fill: none; */
-  fill: #FFDD7D;
+  fill: #ffdc7d74;
   stroke: none;
 }
 

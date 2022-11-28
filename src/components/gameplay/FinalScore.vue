@@ -3,8 +3,7 @@
     <div>
         <div class="finalScoreContainer">
             <img src="../../assets/trees.png" alt="cartoon trees">
-            <span>Your Score: {{ finalPercentage }}%</span>
-            <span>{{ finalScore }}/18</span>
+            <span>Your Score: {{ finalScore }}</span>
         </div>
     </div>
 </template>
@@ -13,12 +12,7 @@
 export default {
     props: [
         "finalScore"
-    ],
-    computed: {
-        finalPercentage() {
-            return this.finalScore / 18 * 100
-        }
-    }
+    ]
 };
 </script>
 
