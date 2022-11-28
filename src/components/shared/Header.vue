@@ -36,7 +36,6 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 2rem 2rem 0 2rem;
     gap: 1rem;
 }
 
