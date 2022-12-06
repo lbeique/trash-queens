@@ -1,6 +1,7 @@
 <template>
     <div class="garbage__container">
-        <img :src="garbageUrl" draggable="true">
+        <img :src="garbageUrl" alt="trash" draggable="true">
+        <!-- <img :src=> -->
         <span class="garbage__name">{{ selectedGarbage.garbageName }}</span>
     </div>
 </template>
@@ -11,7 +12,7 @@ export default {
     methods: {
         getRandomGarbage() {
             this.selectedGarbage = this.garbages[Math.floor(Math.random() * this.garbages.length)]
-            this.garbageUrl = new URL(`../../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url).href
+            this.garbageUrl = new URL(`../../assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url)
             this.setCurrentGarbage(this.selectedGarbage)
         }
     },
@@ -31,43 +32,53 @@ export default {
             garbages: [
                 {
                     garbageName: 'apple',
-                    garbageCategory: 'organics'
+                    garbageCategory: 'organics',
+                    // garbageUrl: require('@/assets/garbages/trash-apple.svg')
                 },
                 {
                     garbageName: 'apple-bitten',
-                    garbageCategory: 'organics'
+                    garbageCategory: 'organics',
+                    // garbageUrl: require('@/assets/garbages/trash-apple-bitten.svg')
                 },
                 {
                     garbageName: 'avocado',
-                    garbageCategory: 'organics'
+                    garbageCategory: 'organics',
+                    // garbageUrl: require('@/assets/garbages/trash-avocado.svg')
                 },
                 {
                     garbageName: 'pizza',
-                    garbageCategory: 'organicx'
+                    garbageCategory: 'organicx',
+                    // garbageUrl: require('@/assets/garbages/trash-pizza.svg')
                 },
                 {
                     garbageName: 'broken-glass',
-                    garbageCategory: 'glass'
+                    garbageCategory: 'glass',
+                    // garbageUrl: require('@/assets/garbages/trash-broken-glass.svg')
                 },
                 {
                     garbageName: 'broken-bottle',
-                    garbageCategory: 'glass'
+                    garbageCategory: 'glass',
+                    // garbageUrl: require('@/assets/garbages/trash-broken--bottle.svg')
                 },
                 {
                     garbageName: 'glass',
-                    garbageCategory: 'glass'
+                    garbageCategory: 'glass',
+                    // garbageUrl: require('@/assets/garbages/trash-broken--bottle.svg')
                 },
                 {
                     garbageName: 'can',
-                    garbageCategory: 'metal'
+                    garbageCategory: 'metal',
+                    // garbageUrl: require('@/assets/garbages/trash-broken--bottle.svg')
                 },
                 {
                     garbageName: 'fork',
-                    garbageCategory: 'metal'
+                    garbageCategory: 'metal',
+                    // garbageUrl: require('@/assets/garbages/trash-fork.svg')
                 },
                 {
                     garbageName: 'frying-pan',
-                    garbageCategory: 'metal'
+                    garbageCategory: 'metal',
+                    // garbageUrl: require('@/assets/garbages/trash-frying-pan.svg')
                 },
                 {
                     garbageName: 'cardbox',
@@ -75,35 +86,47 @@ export default {
                 },
                 {
                     garbageName: 'airplane',
-                    garbageCategory: 'paper'
+                    garbageCategory: 'paper',
+                    // garbageUrl: require('@/assets/garbages/trash-airplane.svg')
+
                 },
                 {
                     garbageName: 'newspaper',
-                    garbageCategory: 'paper'
+                    garbageCategory: 'paper',
+                    // garbageUrl: require('@/assets/garbages/trash-newspaper.svg')
                 },
                 {
                     garbageName: 'mouse',
-                    garbageCategory: 'e-waste'
+                    garbageCategory: 'e-waste',
+                    // garbageUrl: require('@/assets/garbages/trash-mouse.svg')
                 },
                 {
                     garbageName: 'hairdryer',
-                    garbageCategory: 'e-waste'
+                    garbageCategory: 'e-waste',
+                    // garbageUrl: require('@/assets/garbages/trash-hairdyer.svg')
+
                 },
                 {
                     garbageName: 'computer',
-                    garbageCategory: 'e-waste'
+                    garbageCategory: 'e-waste',
+                    // garbageUrl: require('@/assets/garbages/trash-computer.svg')
                 },
                 {
                     garbageName: 'plastic-bag',
-                    garbageCategory: 'plastic'
+                    garbageCategory: 'plastic',
+                    // garbageUrl: require('@/assets/garbages/trash-plastic-bag.svg')
                 },
                 {
                     garbageName: 'plastic-bottle',
-                    garbageCategory: 'plastic'
+                    garbageCategory: 'plastic',
+                    // garbageUrl: require('@/assets/garbages/trash-plastic-bottle.svg')
+
                 },
                 {
                     garbageName: 'plastic-cup',
-                    garbageCategory: 'plastic'
+                    garbageCategory: 'plastic',
+                    // garbageUrl: require('@/assets/garbages/trash-plastic-cup.svg')
+
                 },
             ]
         };
