@@ -37,14 +37,25 @@ export default {
       FULL_DASH_ARRAY: 283
     }
   },
-  computed: {
-    goToResults() {
+  // computed: {
+  //   goToResults() {
+  //     // console.log(this.finalScore)
+  //     clearInterval(this.timerInterval)
+  //     // this.$emit('stop-timer')
+  //     this.timeLeft = 60;
+  //     // this.$destroy;
+  //     this.$router.push(`/result/${this.finalScore}`)
+  //   }
+  // },
+  methods: {
+    clearTimer() {
       // console.log(this.finalScore)
       clearInterval(this.timerInterval)
-      this.$router.push(`/result/${this.finalScore}`)
-    }
-  },
-  methods: {
+      // this.$emit('stop-timer')
+      this.timeLeft = 60;
+      // this.$destroy;
+      // this.$router.push(`/result/${this.finalScore}`)
+    },
     formatTimeLeft(time) {
       // The largest round integer less than or equal to the result of time divided being by 60.
       const minutes = Math.floor(time / 60);
@@ -78,15 +89,16 @@ export default {
       this.timerInterval = setInterval(() => {
         // console.log(this.timeLeft)
 
-        if (this.timeLeft == 0) {
-          this.goToResults
+        if (this.timeLeft < 1) {
+          this.$router.push(`/result/${this.finalScore}`)
+          return this.clearTimer();
         } else {
           // The amount of time passed increments by one
           this.timePassed = this.timePassed += 1;
           this.timeLeft = this.TIME_LIMIT - this.timePassed;
 
           // The time left label is updated
-          document.getElementById("base-timer-label").innerHTML = formatTimeLeft(this.timeLeft);
+          document.getElementById("base-timer-label").innerHTML = this.formatTimeLeft(this.timeLeft);
           this.setCircleDasharray();
         }
       }, 1000)
@@ -95,6 +107,9 @@ export default {
   },
   beforeMount() {
     this.startTimer()
+  },
+  unMount() {
+
   }
 };
 </script>
@@ -137,7 +152,7 @@ export default {
   justify-content: center;
 
   /* Sort of an arbitrary number; adjust to your liking */
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 600;
   font-family: "Nunito-Bold", sans-serif;
   line-height: 0;

@@ -14,7 +14,7 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
         <BackgroundGameVue ref="backgroundGame" />
         <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums"
             :finalScore="score" />
-        <TimerVue class="timer" :finalScore="score" />
+        <TimerVue class="timer" :finalScore="score" ref="timerVue" />
         <div class="grassArea">
             <div class="recycleBins__grid">
                 <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin"
@@ -70,6 +70,9 @@ export default {
             numWrong: 0,
             rounds: 0
         };
+    },
+    beforeRouteLeave(to, from) {
+        this.$refs.timerVue.clearTimer()
     }
 }
 
