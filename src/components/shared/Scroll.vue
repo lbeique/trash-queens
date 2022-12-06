@@ -4,8 +4,8 @@ import Iconify from './Iconify.vue'
 
 <template>
     <div class="scroll" @click="scrollToTop">
-        <p class="scroll__text">{{ text }}</p>
-        <Iconify iconName="icon-park-twotone:up-one" iconColor="#273D4E" :iconHeight=32 />
+        <p class="scroll__text" :color="fontColor">{{ text }}</p>
+        <Iconify iconName="icon-park-twotone:up-one" :iconColor="scrollColor" :iconHeight=32 />
     </div>
 </template>
 
@@ -21,7 +21,18 @@ export default {
         }
     },
     computed: {},
-    props: {},
+    props: {
+        navColor: {
+            type: String,
+            required: false,
+            default: "#273D4E"
+        },
+        fontColor: {
+            type: String,
+            required: false,
+            default: "#273D4E"
+        },
+    },
     data() {
         return {
             text: "Scroll to Top"
@@ -44,6 +55,5 @@ export default {
 .scroll__text {
     font-family: "Nunito-Regular", sans-serif;
     font-size: 1rem;
-    color: #273D4E;
 }
 </style>
