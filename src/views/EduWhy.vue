@@ -17,7 +17,7 @@ import Scroll from '../components/shared/Scroll.vue';
 export default {
     name: "EduWhy",
     methods: {
-
+      
     },
     computed: {},
     props: {},
