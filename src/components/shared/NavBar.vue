@@ -7,6 +7,8 @@ import NavBarItem from './NavBarItem.vue';
         <NavBarItem navIcon='icon-park-twotone:home' navName='Home' navTo='/' navColor='#F5F9E9' />
         <NavBarItem navIcon='icon-park-twotone:game-ps' navName='Game' navTo='/game' navColor='#F5F9E9' />
         <NavBarItem navIcon='icon-park-twotone:book-open' navName='Education' navTo='/education' navColor='#F5F9E9' />
+        <NavBarItem navIcon='icon-park-twotone:every-user' navName='About Us' navTo='/about' navColor='#F5F9E9' />
+
     </nav>
 </template>
 
