@@ -1,7 +1,7 @@
 <template>
     <div class="tracker">
-        <template v-for="(s, i) in 3" :key="i">
-            <div class="tracker__dot" :class="{'tracker__dot--active': trackerPosition == s}" />
+        <template v-for="(s, i) in totalPositions" :key="i">
+            <div class="tracker__dot" :class="variant ? {'tracker__dot--dark': trackerPosition == s} : {'tracker__dot--active': trackerPosition == s}" />
         </template>
     </div>
 </template>
@@ -17,6 +17,15 @@ export default {
         trackerPosition: {
             type: Number,
             required: true
+        },
+        totalPositions: {
+            type: Number,
+            required: true
+        },
+        variant: {
+            type: Boolean,
+            required: false,
+            default: false
         }
     },
     data() {
@@ -43,5 +52,9 @@ export default {
 
 .tracker__dot--active {
     background-color: #F7C932;
+}
+
+.tracker__dot--dark {
+    background-color: #273D4E;
 }
 </style>

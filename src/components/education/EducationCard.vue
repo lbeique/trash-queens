@@ -21,7 +21,7 @@ import Button from '../shared/Button.vue'
 
 <script>
 export default {
-    name: "Card",
+    name: "EducationCard",
     methods: {},
     computed: {},
     props: {

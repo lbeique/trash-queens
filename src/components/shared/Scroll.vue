@@ -32,6 +32,11 @@ export default {
             required: false,
             default: "#273D4E"
         },
+        scrollColor: {
+            type: String,
+            required: false,
+            default: "#273D4E"
+        }
     },
     data() {
         return {
@@ -50,6 +55,11 @@ export default {
     padding: 1rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+}
+
+.scroll:hover {
+    color: #F7C932;
+    transform: translateY(-0.1rem);
 }
 
 .scroll__text {

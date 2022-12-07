@@ -15,7 +15,7 @@ import Tracker from './Tracker.vue';
             <Button :text="forwardText" variant="tutorial" @click="forwardClick" />
         </div>
         <div class="card__tracker">
-            <Tracker :trackerPosition="currentStep" />
+            <Tracker :trackerPosition="currentStep" :totalPositions=3 />
         </div>
     </div>
 </template> 
@@ -68,7 +68,6 @@ export default {
 <style scoped>
 .card {
     width: 100%;
-    height: 100%;
     min-height: 622px;
     display: flex;
     flex-direction: column;
