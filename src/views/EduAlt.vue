@@ -9,7 +9,7 @@ import Scroll from '../components/shared/Scroll.vue';
 <template>
   <Header title="Reduce, Reuse, and Recycle" />
   <div class="card column yellow">
-    <img class="full" src="src/assets/education/altToRecycle-img1.jpg" alt="Image text" />
+    <img class="full" src="/assets/education/altToRecycle-img1.jpg" alt="Image text" />
     <h2 class="card__title__text">Reduce</h2>
     <p class="card__text">Cut back on the amount of trash we generate. It’s
       the best method for keeping the environment

@@ -9,7 +9,7 @@
     </div>
 
     <div class="hintButton hintChild" @click="showHintBox = !showHintBox">
-      <img src="../../assets/idea.png" alt="hint">
+      <img src="/assets/idea.png" alt="hint">
     </div>
   </div>
 

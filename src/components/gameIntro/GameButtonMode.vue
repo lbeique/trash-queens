@@ -4,7 +4,7 @@
     <div class="gameMode__button--left">
       <div class="gameMode__container--blue">
         <div class="gameMode__img--easy">
-          <img src="../../assets/garbages/trash-apple.svg" alt="trash-apple" />
+          <img src="/assets/garbages/trash-apple.svg" alt="trash-apple" />
         </div>
         <div class="gameMode__content--easy">
           <h1>EASY</h1>
@@ -29,7 +29,7 @@
           </p>
         </div>
         <div class="gameMode__img--hard">
-          <img src="../../assets/garbages/trash-apple-bitten.svg" alt="trash-apple" />
+          <img src="/assets/garbages/trash-apple-bitten.svg" alt="trash-apple" />
         </div>
       </div>
     </div>

@@ -13,25 +13,25 @@ import NavBar from './components/shared/NavBar.vue';
 @font-face {
   font-family: "Nunito-Regular";
   src: local("Nunito"),
-    url('../src/assets/fonts/Nunito-Regular.ttf') format("truetype");
+    url('/assets/fonts/Nunito-Regular.ttf') format("truetype");
 }
 
 @font-face {
   font-family: "Nunito-Bold";
   src: local("Nunito"),
-    url('../src/assets/fonts/Nunito-Bold.ttf') format("truetype");
+    url('/assets/fonts/Nunito-Bold.ttf') format("truetype");
 }
 
 @font-face {
   font-family: "FuzzyBubbles-Regular";
   src: local("FuzzyBubbles"),
-    url('../src/assets/fonts/FuzzyBubbles-Regular.ttf') format("truetype");
+    url('/assets/fonts/FuzzyBubbles-Regular.ttf') format("truetype");
 }
 
 @font-face {
   font-family: "FuzzyBubbles-Bold";
   src: local("FuzzyBubbles"),
-    url('../src/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
+    url('/assets/fonts/FuzzyBubbles-Bold.ttf') format("truetype");
 }
 
 main {

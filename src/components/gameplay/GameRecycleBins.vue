@@ -5,22 +5,22 @@
     isWrong ? 'isWrong' : ''
   ]" @drop="onDrop(binType)" @dragover.prevent>
     <template v-if="binType == 'organics'">
-      <img src="../../assets/recycling-bins/organic-bin.svg" alt="organic-bin" draggable="false" />
+      <img src="/assets/recycling-bins/organic-bin.svg" alt="organic-bin" />
     </template>
     <template v-else-if="binType == 'glass'">
-      <img src="../../assets/recycling-bins/glass-bin.svg" alt="glass-bin" draggable="false" />
+      <img src="/assets/recycling-bins/glass-bin.svg" alt="glass-bin" />
     </template>
     <template v-else-if="binType == 'metal'">
-      <img src="../../assets/recycling-bins/metal-bin.svg" alt="metal-bin" draggable="false" />
+      <img src="/assets/recycling-bins/metal-bin.svg" alt="metal-bin" />
     </template>
     <template v-else-if="binType == 'paper'">
-      <img src="../../assets/recycling-bins/paper-bin.svg" alt="paper-bin" draggable="false" />
+      <img src="/assets/recycling-bins/paper-bin.svg" alt="paper-bin" />
     </template>
     <template v-else-if="binType == 'e-waste'">
-      <img src="../../assets/recycling-bins/e-waste-bin.svg" alt="e-waste-bin" draggable="false" />
+      <img src="/assets/recycling-bins/e-waste-bin.svg" alt="e-waste-bin" />
     </template>
     <template v-else-if="binType == 'plastic'">
-      <img src="../../assets/recycling-bins/plastic-bin.svg" alt="plastic-bin" draggable="false" />
+      <img src="/assets/recycling-bins/plastic-bin.svg" alt="plastic-bin" />
     </template>
     <p>{{ binType.toUpperCase() }}</p>
   </div>
