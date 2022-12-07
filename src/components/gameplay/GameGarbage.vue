@@ -1,6 +1,6 @@
 <template>
     <div class="garbage__container">
-        <img :src=selectedGarbage.garbageUrl alt="trash" draggable="true">
+        <img :src=garbageUrl alt="trash" draggable="true">
         <!-- <img :src=> -->
         <span class="garbage__name">{{ selectedGarbage.garbageName }}</span>
     </div>
@@ -13,7 +13,8 @@ export default {
         getRandomGarbage() {
             this.selectedGarbage = this.garbages[Math.floor(Math.random() * this.garbages.length)]
             // this.garbageUrl = new URL(`/assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`, import.meta.url)
-            this.garbageUrl = this.selectedGarbage.garbageUrl
+            this.garbageUrl = `/assets/garbages/trash-${this.selectedGarbage.garbageName}.svg`
+            // this.garbageUrl = this.selectedGarbage.garbageUrl
             this.setCurrentGarbage(this.selectedGarbage)
         }
     },
@@ -34,99 +35,99 @@ export default {
                 {
                     garbageName: 'apple',
                     garbageCategory: 'organics',
-                    garbageUrl: '/assets/garbages/trash-apple.svg'
+                    // garbageUrl: '/assets/garbages/trash-apple.svg'
                 },
                 {
                     garbageName: 'apple-bitten',
                     garbageCategory: 'organics',
-                    garbageUrl: '/assets/garbages/trash-apple-bitten.svg'
+                    // garbageUrl: '/assets/garbages/trash-apple-bitten.svg'
                 },
                 {
                     garbageName: 'avocado',
                     garbageCategory: 'organics',
-                    garbageUrl: '/assets/garbages/trash-avocado.svg'
+                    // garbageUrl: '/assets/garbages/trash-avocado.svg'
                 },
                 {
                     garbageName: 'pizza',
                     garbageCategory: 'organicx',
-                    garbageUrl: '/assets/garbages/trash-pizza.svg'
+                    // garbageUrl: '/assets/garbages/trash-pizza.svg'
                 },
                 {
                     garbageName: 'broken-glass',
                     garbageCategory: 'glass',
-                    garbageUrl: '/assets/garbages/trash-broken-glass.svg'
+                    // garbageUrl: '/assets/garbages/trash-broken-glass.svg'
                 },
                 {
                     garbageName: 'broken-bottle',
                     garbageCategory: 'glass',
-                    garbageUrl: '/assets/garbages/trash-broken--bottle.svg'
+                    // garbageUrl: '/assets/garbages/trash-broken--bottle.svg'
                 },
                 {
                     garbageName: 'glass',
                     garbageCategory: 'glass',
-                    garbageUrl: '/assets/garbages/trash-broken--bottle.svg'
+                    // garbageUrl: '/assets/garbages/trash-broken--bottle.svg'
                 },
                 {
                     garbageName: 'can',
                     garbageCategory: 'metal',
-                    garbageUrl: '/assets/garbages/trash-broken--bottle.svg'
+                    // garbageUrl: '/assets/garbages/trash-can.svg'
                 },
                 {
                     garbageName: 'fork',
                     garbageCategory: 'metal',
-                    garbageUrl: '/assets/garbages/trash-fork.svg'
+                    // garbageUrl: '/assets/garbages/trash-fork.svg'
                 },
                 {
                     garbageName: 'frying-pan',
                     garbageCategory: 'metal',
-                    garbageUrl: '/assets/garbages/trash-frying-pan.svg'
+                    // garbageUrl: '/assets/garbages/trash-frying-pan.svg'
                 },
                 {
                     garbageName: 'cardbox',
                     garbageCategory: 'paper',
-                    garbageUrl: '/assets/garbages/trash-cardbox.svg'
+                    // garbageUrl: '/assets/garbages/trash-cardbox.svg'
                 },
                 {
                     garbageName: 'airplane',
                     garbageCategory: 'paper',
-                    garbageUrl: '/assets/garbages/trash-airplane.svg'
+                    // garbageUrl: '/assets/garbages/trash-airplane.svg'
                 },
                 {
                     garbageName: 'newspaper',
                     garbageCategory: 'paper',
-                    garbageUrl: '/assets/garbages/trash-newspaper.svg'
+                    // garbageUrl: '/assets/garbages/trash-newspaper.svg'
                 },
                 {
                     garbageName: 'mouse',
                     garbageCategory: 'e-waste',
-                    garbageUrl: '/assets/garbages/trash-mouse.svg'
+                    // garbageUrl: '/assets/garbages/trash-mouse.svg'
                 },
                 {
                     garbageName: 'hairdryer',
                     garbageCategory: 'e-waste',
-                    garbageUrl: '/assets/garbages/trash-hairdyer.svg'
+                    // garbageUrl: '/assets/garbages/trash-hairdyer.svg'
 
                 },
                 {
                     garbageName: 'computer',
                     garbageCategory: 'e-waste',
-                    garbageUrl: '/assets/garbages/trash-computer.svg'
+                    // garbageUrl: '/assets/garbages/trash-computer.svg'
                 },
                 {
-                    garbageName: 'plastic-bag',
+                    garbageName: 'bag',
                     garbageCategory: 'plastic',
-                    garbageUrl: '/assets/garbages/trash-plastic-bag.svg'
+                    // garbageUrl: '/assets/garbages/trash-plastic-bag.svg'
                 },
                 {
-                    garbageName: 'plastic-bottle',
+                    garbageName: 'bottle',
                     garbageCategory: 'plastic',
-                    garbageUrl: '/assets/garbages/trash-plastic-bottle.svg'
+                    // garbageUrl: '/assets/garbages/trash-plastic-bottle.svg'
 
                 },
                 {
-                    garbageName: 'plastic-cup',
+                    garbageName: 'cup',
                     garbageCategory: 'plastic',
-                    garbageUrl: '/assets/garbages/trash-plastic-cup.svg'
+                    // garbageUrl: '/assets/garbages/trash-plastic-cup.svg'
 
                 },
             ]
