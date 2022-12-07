@@ -4,10 +4,12 @@ import { RouterLink, RouterView } from 'vue-router'
 import Header from '../components/shared/Header.vue';
 import UserEngagement from '../components/education/UserEngagement.vue';
 import Scroll from '../components/shared/Scroll.vue';
+import Carousel from '../components/education/Carousel.vue';
 </script>
 
 <template>
   <Header title="How to Recycle?" />
+  <Carousel @forwardClick="nextCard" @backClick="backCard" />
   <UserEngagement>
     <Scroll scrollColor="#F5F9E9" fontColor="#F5F9E9"/>
   </UserEngagement>
@@ -17,16 +19,32 @@ import Scroll from '../components/shared/Scroll.vue';
 export default {
     name: "EduHow",
     methods: {
+      nextCard() {
+        this.$refs.carousel.nextCard();
+      },
+      backCard() {
+        this.$refs.carousel.backCard();
+      }
+    },
+    computed: {
+
+      
+    },
+    props: {
+
 
     },
-    computed: {},
-    props: {},
     data() {
-        return {};
+        return {
+          
+
+        };
     },
     components: { 
-      Header, 
-      Button 
+      Header,
+      UserEngagement,
+      Scroll,
+      Carousel 
     }
 };
 </script>

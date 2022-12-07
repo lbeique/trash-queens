@@ -1,15 +1,15 @@
 <script setup>
 import Button from '../shared/Button.vue'
-import Tracker from './Tracker.vue';
+import Tracker from '../tutorial/Tracker.vue';
 </script>
 
 <template>
-    <div class="card">
-        <h1 class="card__title">Tutorial</h1>
+    <div class="card" :class="color">
+        <h1 class="card__title">{{ title }}</h1>
         <div class="card__image_row">
             <img class="card__image" :src="trashSource" alt="trash">
         </div>
-        <p class="card__content">{{ content }}</p>
+        <p class="card__content">{{ text }}</p>
         <div class="card__arrows">
             <Arrow direction="left" @click="backClick" />
             <Arrow direction="right" @click="forwardClick" />
@@ -19,7 +19,7 @@ import Tracker from './Tracker.vue';
             <img class="card__bin" :src="binSource" alt="bin">
         </div>
         <div class="card__tracker">
-            <Tracker :trackerPosition="currentStep" />
+            <Tracker :trackerPosition="currentStep" :totalPositions=6 />
         </div>
     </div>
 </template> 
@@ -62,6 +62,10 @@ export default {
             type: Number,
             required: true
         },
+        color: {
+            type: String,
+            required: true
+        },
     },
     data() {
         return {};
@@ -78,10 +82,21 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #273D4E;
     padding: 1rem;
     border-radius: 20px;
     font-family: "Nunito-Regular", sans-serif;
+}
+
+.red {
+    background-color: #84A7F1;
+}
+
+.blue {
+    background-color: #F7C932;
+}
+
+.yellow {
+    background-color: #E05F4E;
 }
 
 .card__title {

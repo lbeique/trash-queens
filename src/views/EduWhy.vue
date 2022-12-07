@@ -26,9 +26,7 @@ import WhyRecycleCardVue from "../components/education/WhyRecycleCard.vue";
 <script>
 export default {
   name: "EduWhy",
-  methods: {
-
-  },
+  methods: {},
   computed: {},
   props: {},
   data() {

@@ -1,6 +1,6 @@
 <template>
     <div class="tracker">
-        <template v-for="(s, i) in 3" :key="i">
+        <template v-for="(s, i) in totalPositions" :key="i">
             <div class="tracker__dot" :class="{'tracker__dot--active': trackerPosition == s}" />
         </template>
     </div>
@@ -15,6 +15,10 @@ export default {
     computed: {},
     props: {
         trackerPosition: {
+            type: Number,
+            required: true
+        },
+        totalPositions: {
             type: Number,
             required: true
         }

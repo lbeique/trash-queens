@@ -15,7 +15,7 @@ import Tracker from './Tracker.vue';
             <Button :text="forwardText" variant="tutorial" @click="forwardClick" />
         </div>
         <div class="card__tracker">
-            <Tracker :trackerPosition="currentStep" />
+            <Tracker :trackerPosition="currentStep" :totalPositions=3 />
         </div>
     </div>
 </template> 
