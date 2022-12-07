@@ -9,49 +9,48 @@ import Carousel from '../components/education/Carousel.vue';
 
 <template>
   <Header title="How to Recycle?" />
-  <Carousel @forwardClick="nextCard" @backClick="backCard" />
-  <UserEngagement>
-    <Scroll scrollColor="#F5F9E9" fontColor="#F5F9E9"/>
-  </UserEngagement>
+  <div class="page">
+    <Carousel />
+  </div>
 </template>
 
 <script>
 export default {
-    name: "EduHow",
-    methods: {
-      nextCard() {
-        this.$refs.carousel.nextCard();
-      },
-      backCard() {
-        this.$refs.carousel.backCard();
-      }
-    },
-    computed: {
+  name: "EduHow",
+  methods: {
 
-      
-    },
-    props: {
+  },
+  computed: {
 
 
-    },
-    data() {
-        return {
-          
+  },
+  props: {
 
-        };
-    },
-    components: { 
-      Header,
-      UserEngagement,
-      Scroll,
-      Carousel 
-    }
+
+  },
+  data() {
+    return {
+
+
+    };
+  },
+  components: {
+    Header,
+    Carousel
+  }
 };
 </script>
 
 <style scoped>
 .header {
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  width: 100%;
+}
 </style>

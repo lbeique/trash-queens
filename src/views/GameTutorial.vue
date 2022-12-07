@@ -61,6 +61,7 @@ export default {
 .page {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 2rem;
     gap: 2rem;
     width: 100%;
