@@ -4,7 +4,7 @@
 <p align="center"><strong><a href="https://tq-server-production.up.railway.app/" target="_blank">Start Playing Now!</a></strong></p>
 <br>
 <br>
-![TrashQueens](/src/assets/others/hero-image.svg)
+![TrashQueens](/src/assets/trees.png)
 <br>
 <br>
 <h3>Still here?</h3>
