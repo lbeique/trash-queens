@@ -7,7 +7,7 @@
 ![TrashQueens](/src/assets/others/hero-image.svg)
 <br>
 <br>
-<h2>Still here?</h2>
+<h3>Still here?</h3>
 <br>
 <br>
 <h3>You just want to build this project in your own dev environment</h3>
