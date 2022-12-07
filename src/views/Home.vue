@@ -48,15 +48,15 @@ export default {
     return {
       gameText: "Help the Trashy Queens sort through the wastes of the endless Trash Mountain!",
       gameTitle: "Explore the Game",
-      gameImage: new URL(`../assets/recycling-bins/plastic-bin.svg`, import.meta.url).href,
+      gameImage: `/assets/recycling-bins/plastic-bin.svg`,
       gameButtonText: "The Game",
       resourceText: "Saving the world requires you to be vigilant. Learn real life skills to tackle the challenges around you!",
       resourceTitle: "Expand your Knowledge",
-      resourceImage: new URL(`../assets/recycling-bins/organic-bin.svg`, import.meta.url).href,
+      resourceImage:`/assets/recycling-bins/organic-bin.svg`,
       resourceButtonText: "Learn More",
       aboutText: "Come and meet the awesome developers who designed and built this game!",
       aboutTitle: "Meat the Team",
-      aboutImage: new URL(`../assets/recycling-bins/metal-bin.svg`, import.meta.url).href,
+      aboutImage: `/assets/recycling-bins/metal-bin.svg`,
       aboutButtonText: "About Us",
     };
   },

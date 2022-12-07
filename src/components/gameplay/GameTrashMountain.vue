@@ -1,7 +1,7 @@
 <template>
     <div>
         <img draggable="false" class="trashMountain__svg" :style="{ 'transform': `translateY(${translateRem}rem)` }"
-            src="../../assets/garbages/trash-mountain.svg" alt="trash-mountain" />
+            src="/assets/garbages/trash-mountain.svg" alt="trash-mountain" />
         <!-- <button @click="moveMountainY()">move up </button> -->
     </div>
 </template>

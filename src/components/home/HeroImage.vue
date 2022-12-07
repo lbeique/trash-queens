@@ -1,6 +1,6 @@
 <template>
     <div class="heroImage__container">
-        <img src="../../assets/others/hero-image.svg" alt="hero-image">
+        <img src="/assets/others/hero-image.svg" alt="hero-image">
     </div>
 </template>
 
