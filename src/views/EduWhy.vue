@@ -52,7 +52,7 @@ h2 {
   font-family: "FuzzyBubbles-bold", sans-serif;
   text-align: center;
   max-width: 350px;
-  margin: 12% 0;
+  margin: 50px 0;
 }
 </style>
 
