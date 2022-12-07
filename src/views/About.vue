@@ -14,15 +14,18 @@ import Header from '../components/shared/Header.vue';
 
   <div class=" card left--card">
     <div class="card__content">
-      <h3> this is the title </h3>
-      <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. Always hungry. Curl into a furry donut purr like an angel but being gorgeous with belly side up so destroy couch.</p>
+      <h3> Vision </h3>
+     <p>We want to provide a quick and fun experience that you can share with others and educate them on how to properly dispose of their trash.
+     </p>
     </div>
   </div>
 
   <div class=" card right--card">
     <div class="card__content">
-      <h3> this is the title </h3>
-      <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. Always hungry. Curl into a furry donut purr like an angel but being gorgeous with belly side up so destroy couch.</p>
+      <h3> Trash Queens </h3>
+<!--      ADD TO THE TEXT-->
+      <p>We are a team of four full stack BCIT students....</p>
+
     </div>
   </div>
 
@@ -39,13 +42,14 @@ import Header from '../components/shared/Header.vue';
       </div>
     </div>
     <div class="card__TM--content ">
-      <img src="https://picsum.photos/seed/picsum/91/91" alt="Yasmina Photo">
+      <div class="card__image">
+      <img src="https://images.unsplash.com/photo-1518478793609-e762ed795b6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Yasmina Photo">
+        </div>
       <div>
         <h3>Yasmina Amirifar </h3>
-        <p>Shes always wanted to be a web developer ever since she remember! Working part time in google.</p>
+        <p>A passionate web developer who enjoys creating entertaining and cool web apps. </p>
         <div class="card__link">
-          <a href="#">social link </a>
-          <a href="#">social link</a>
+          <a href="https://www.linkedin.com/in/yasmina-amir-70b88b196/">LinkedIn </a>
         </div>
       </div>
     </div>
@@ -94,7 +98,6 @@ export default {
 </script>
 
 <style scoped>
-
 .header {
   padding: 2rem;
 }
@@ -125,7 +128,7 @@ export default {
 
 .card__content {
   width: 100%;
-  padding: 1rem ;
+  padding: .5rem;
   gap: 1.5rem;
   /*display: flex;*/
   /*flex-direction: column;*/
@@ -137,23 +140,36 @@ export default {
   display:flex;
   gap:1.5rem;
   margin-top:24px;
-  padding: 1rem;
+  padding: .5rem;
 
 }
 
+.card__link{
+  display:flex;
+  gap:1rem;
+}
 
-.card p{
-  font-size: 12px;
+a{
+  color: #F7C932 ;
+  font-family: "Nunito-Regular", sans-serif;
+  font-size: 11px;
 }
 
 p{
   font-family: "Nunito-Regular", sans-serif;
 }
 
+.card p{
+  font-size: 12px;
+}
+
 img{
   width:91px;
   height:91px;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
 
 h2 {
   font-family: "FuzzyBubbles-Regular", sans-serif;
@@ -167,11 +183,5 @@ h3{
   margin-bottom:5px;
 }
 
-a{
-  margin-right: 20px;
-  color: #F7C932 ;
-  font-family: "Nunito-Regular", sans-serif;
-  font-size: 11px;
-}
 
 </style>
