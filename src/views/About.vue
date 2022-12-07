@@ -7,7 +7,7 @@ import Header from '../components/shared/Header.vue';
 <template>
   <Header title="About" >
 
-    <template class="gameIntro__content" v-slot:Desc>
+    <template class="aboutIntro__content" v-slot:Desc>
       <p>We hope that you enjoy exploring our project as much as we enjoyed making it!</p>
     </template>
   </Header>
@@ -30,8 +30,8 @@ import Header from '../components/shared/Header.vue';
     <div class="card__TM--content ">
       <img src="https://picsum.photos/seed/picsum/91/91" alt="Phoenix Photo">
       <div>
-        <h3>Name </h3>
-        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+        <h3>Phoenix Lai</h3>
+        <p>Full-stack web developer/ designer trying to create a better world, one less single use plastic at a time.</p>
         <div class="card__link">
           <a href="#">social link </a>
           <a href="#">social link</a>
@@ -41,8 +41,8 @@ import Header from '../components/shared/Header.vue';
     <div class="card__TM--content ">
       <img src="https://picsum.photos/seed/picsum/91/91" alt="Yasmina Photo">
       <div>
-        <h3>Name </h3>
-        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+        <h3>Yasmina Amirifar </h3>
+        <p>Shes always wanted to be a web developer ever since she remember! Working part time in google.</p>
         <div class="card__link">
           <a href="#">social link </a>
           <a href="#">social link</a>
@@ -52,8 +52,8 @@ import Header from '../components/shared/Header.vue';
     <div class="card__TM--content">
       <img src="https://picsum.photos/seed/picsum/91/91" alt="Stefanie Photo">
       <div>
-        <h3>Name </h3>
-        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+        <h3>Stefanie Taswin</h3>
+        <p>An aspiring full-stack web developer. Obsessed with coffee, games, and an explorer.</p>
         <div class="card__link">
           <a href="#">social link </a>
           <a href="#">social link</a>
@@ -63,8 +63,8 @@ import Header from '../components/shared/Header.vue';
     <div class="card__TM--content">
       <img src="https://picsum.photos/seed/picsum/91/91" alt="Laurent Photo">
       <div>
-        <h3>Name </h3>
-        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+        <h3>Laurent Beique </h3>
+        <p>One part web developer and three parts self-critic all wrapped up in a meat Popsicle.</p>
         <div class="card__link">
           <a href="#">social link </a>
           <a href="#">social link</a>
@@ -105,7 +105,7 @@ export default {
   width: 390px;
   margin-top: 2rem;
   padding: 1rem;
-  color: white;
+  color:#F5F9E9;
   background-color: #5AB4AB;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -128,11 +128,11 @@ export default {
 
 .card__content {
   width: 100%;
-  padding: 2rem 1.5rem;
+  padding: 1rem ;
   gap: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
 }
 
 /*TM stand for Team Member*/
@@ -140,8 +140,18 @@ export default {
   display:flex;
   gap:1.5rem;
   margin-top:24px;
+  padding: 1rem;
+
 }
 
+
+.card p{
+  font-size: 12px;
+}
+
+p{
+  font-family: "Nunito-Regular", sans-serif;
+}
 
 img{
   width:91px;
@@ -156,11 +166,8 @@ h2 {
 
 h3{
   font-family: "FuzzyBubbles-Bold", sans-serif;
-}
-
-p{
-  font-family: "Nunito-Regular", sans-serif;
-  font-size: 12px;
+  font-size: 18px ;
+  margin-bottom:5px;
 }
 
 a{
