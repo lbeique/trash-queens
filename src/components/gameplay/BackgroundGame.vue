@@ -30,18 +30,18 @@ export default {
         changeBack(n) {
             console.log("wtf", n)
             if (n <= 3) {
-                this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[0]}`, import.meta.url).href
+                this.backgroundUrl = `/assets/backgrounds/${this.backgrounds[0]}`
             } else if (3 < n < 7) {
-                this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[1]}`, import.meta.url).href
+                this.backgroundUrl = `/assets/backgrounds/${this.backgrounds[1]}`
             }
 
             if (n >= 7) {
-                this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[2]}`, import.meta.url).href
+                this.backgroundUrl = `/assets/backgrounds/${this.backgrounds[2]}`
             }
         }
     },
     beforeMount() {
-        this.backgroundUrl = new URL(`../../assets/backgrounds/${this.backgrounds[0]}`, import.meta.url).href
+        this.backgroundUrl = `/assets/backgrounds/${this.backgrounds[0]}`
 
     }
 

@@ -9,10 +9,13 @@ import FinalScoreVue from '../components/gameplay/FinalScore.vue';
 import BackgroundGameVue from '../components/gameplay/BackgroundGame.vue';
 import Timer from '../components/gameplay/Timer.vue';
 import GameTrashMountain from '../components/gameplay/GameTrashMountain.vue';
+import WhyRecycleCardVue from '../components/education/WhyRecycleCard.vue';
 </script>
 
 <template>
   <GoBack :isGame=true />
+  <WhyRecycleCardVue title="We are big Polluters!" text="The average person throws away 4 pounds of trash every single day. Over a year, that makes about 1.5 tons of waste. Now consider that there are 7 billion people on this planet and you can see why this is a massive environmental problem!
+" image="src/assets/education/whyRecycle-img1.jpg" colorCard="yellow" />
   <Button text="Start Game" variant="game" @click="startGame" />
   <div class="recycleBins__grid">
     <GameRecycleBins v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"

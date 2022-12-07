@@ -12,13 +12,12 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
   <div class="gameContainer">
     <ScoreVue :currentScore="score" class="topScore" />
     <BackgroundGameVue ref="backgroundGame" />
-    <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums"
-                       :finalScore="score" />
-    <TimerVue class="timer" :finalScore="score" />
+    <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums" :finalScore="score" />
+    <TimerVue class="timer" :finalScore="score" ref="timerVue" />
     <div class="grassArea">
       <div class="recycleBins__grid">
-        <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin"
-                            :currentGarbage="currentGarbage" @next-garbage="nextGarbage" @wrong-drop="wrongDrop" />
+        <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
+          @next-garbage="nextGarbage" @wrong-drop="wrongDrop" />
       </div>
       <GameGarbageVue :setCurrentGarbage="setCurrentGarbage" ref="gameGarbage" class="garbage" />
     </div>
@@ -68,6 +67,9 @@ export default {
       numWrong: 0,
       rounds: 0
     };
+  },
+  beforeRouteLeave(to, from) {
+    this.$refs.timerVue.clearTimer()
   }
 }
 
@@ -120,5 +122,4 @@ export default {
 .garbage {
   margin: 20%
 }
-
 </style>
