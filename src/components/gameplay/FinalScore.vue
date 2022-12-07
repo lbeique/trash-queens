@@ -2,7 +2,7 @@
 <template>
     <div>
         <div class="finalScoreContainer">
-            <img src="../../assets/trees.png" alt="cartoon trees">
+            <img src="/assets/trees.png" alt="cartoon trees">
             <span>Your Score: {{ finalScore }}</span>
         </div>
     </div>

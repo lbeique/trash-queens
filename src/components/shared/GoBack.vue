@@ -5,7 +5,7 @@ import ExitGamePrompt from '../gameplay/ExitGamePrompt.vue';
 <template>
   <div>
     <div class="go-back" @click="backBtnClicked">
-      <img src="../../assets/back.png" alt="go back">
+      <img src="/assets/back.png" alt="go back">
     </div>
     <ExitGamePrompt @stayInGame="handleCreate" v-if="openPrompt && isGame" />
   </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="gameTitle__container">
-        <img src="../../assets/others/game-title.svg" alt="game-title">
+        <img src="/assets/others/game-title.svg" alt="game-title">
     </div>
 </template>
 
