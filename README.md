@@ -4,7 +4,7 @@
 <p align="center"><strong><a href="https://tq-server-production.up.railway.app/" target="_blank">Start Playing Now!</a></strong></p>
 <br>
 <br>
-<img src="/src/assets/trees.png" alt="trees" />
+<img src="/src/assets/trees.png" alt="trees" align="center"/>
 <br>
 <br>
 <h3>Still here?</h3>
