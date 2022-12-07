@@ -103,7 +103,7 @@ export default {
   align-items: center;
   position: relative;
   width: 390px;
-  margin-top: 2rem;
+  margin:1rem 0 2rem 0;
   padding: 1rem;
   color:#F5F9E9;
   background-color: #5AB4AB;
@@ -122,9 +122,6 @@ export default {
   padding-right: 50px;
 }
 
-.team--card{
-  margin-bottom: 2rem;
-}
 
 .card__content {
   width: 100%;
