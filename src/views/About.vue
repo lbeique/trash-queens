@@ -24,7 +24,7 @@ import Header from '../components/shared/Header.vue';
     <div class="card__content">
       <h3> Trash Queens </h3>
 <!--      ADD TO THE TEXT-->
-      <p>We are a team of four full stack BCIT students....</p>
+      <p>We are a team of....</p>
 
     </div>
   </div>
@@ -181,6 +181,7 @@ h3{
   font-family: "FuzzyBubbles-Bold", sans-serif;
   font-size: 18px ;
   margin-bottom:5px;
+
 }
 
 
