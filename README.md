@@ -10,10 +10,10 @@
 <h3>Still here?</h3>
 <br>
 <br>
-<h3>You just want to build this project in your own dev environment</h3>
+<h4>You just want to build this project in your own dev environment don't you...</h4>
 <br>
 <br>
-<h4>You don't want to play the game...</h4>
+<h5>You don't want to play the game...</h5>
 <br>
 <br>
 <h2>To Setup the Project</h2>
