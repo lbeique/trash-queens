@@ -34,10 +34,43 @@ import Header from '../components/shared/Header.vue';
   </div>
 
   <div class=" card card__team">
-    <div class="card__content">
-      <h3> this is the title </h3>
-      <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. Always hungry. Curl into a furry donut purr like an angel but being gorgeous with belly side up so destroy couch, for leave fur on owners clothes.</p>
+
+    <div class="card__teamContent ">
+      <img src="https://picsum.photos/seed/picsum/91/91" alt="Phoenix Photo">
+      <div>
+        <h3>Name </h3>
+        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+        <div class="links__team">
+          <a href="#">social link </a>
+          <a href="#">social link</a>
+
+        </div>
+      </div>
     </div>
+    <div class="card__teamContent ">
+      <img src="https://picsum.photos/seed/picsum/91/91" alt="Yasmina Photo">
+      <div>
+        <h3>Name </h3>
+        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+      </div>
+    </div>
+
+    <div class="card__teamContent ">
+      <img src="https://picsum.photos/seed/picsum/91/91" alt="Stefanie Photo">
+      <div>
+        <h3>Name </h3>
+        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+      </div>
+    </div>
+
+    <div class="card__teamContent">
+      <img src="https://picsum.photos/seed/picsum/91/91" alt="Laurent Photo">
+      <div>
+        <h3>Name </h3>
+        <p>Chill on the couch table wack the mini furry mouse yet purr when give birth but be superior yet lasers are tiny mice. </p>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -78,11 +111,15 @@ export default {
 }
 .card{
 
-  display: flex;
-  align-items: flex-end;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+
+  align-items: center;
+  /*justify-content: space-between;*/
+
   position: relative;
   /*width: 21.875rem;*/
-  width: 360px;
+  width: 390px;
   /*height: 10.125rem;*/
   margin-top: 2rem;
 
@@ -96,6 +133,24 @@ export default {
   /*max-width: 390px;*/
   color: white;
   background-color: #5AB4AB;
+}
+
+img{
+  width:91px;
+  height:91px;
+}
+
+/*.links__team{*/
+/*  display:flex;*/
+/*  justify-content: space-around;*/
+
+
+/*}*/
+a{
+  margin-right: 20px;
+  color: #F7C932 ;
+  font-family: "Nunito-Regular", sans-serif;
+  font-size: 11px;
 }
 
 .gameIntro__content {
@@ -119,18 +174,15 @@ export default {
 .card__appLeft{
   /*align-self: flex-start;*/
   transform: translateX(-2.5rem);
-
-  border-radius:  0 8px 8px 0;
+  border-radius: 8px;
   padding-left: 50px;
-
-
 }
 
 .card__appRight{
   /*align-self: flex-end;*/
   transform: translateX(2.5rem);
 
-  border-radius:  8px 0 0 8px;
+  border-radius:  8px;
   padding-right: 50px;
 
 }
@@ -141,11 +193,15 @@ export default {
 
   border-radius:  0 8px 8px 0;
   padding-left: 50px;
-
-
+  margin-bottom: 2rem;
 }
 
+.card__teamContent {
+  display:flex;
+  gap:1.5rem;
+  margin-top:24px;
 
+}
 h2 {
   font-family: "FuzzyBubbles-Regular", sans-serif;
   color: #5ab4ab;
@@ -156,15 +212,10 @@ h3{
   font-family: "FuzzyBubbles-Bold", sans-serif;
 }
 
-
-
-
-
-
-
 p{
   font-family: "Nunito-Regular", sans-serif;
   font-size: 12px;
 }
+
 
 </style>
