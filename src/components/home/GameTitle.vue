@@ -1,5 +1,6 @@
 <template>
     <div class="gameTitle__container">
+        <div class="gameTitle__background"></div>
         <img src="/assets/others/game-title.svg" alt="game-title">
     </div>
 </template>
