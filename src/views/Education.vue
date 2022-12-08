@@ -7,7 +7,11 @@ import EducationCard from '../components/education/EducationCard.vue';
 
 <template>
   <div class="page">
-    <Header title="Education" />
+    <Header title="Education">
+      <template v-slot:Desc>
+        <p>Use our resources to further educate your friends and family.</p>
+      </template>
+    </Header>
     <EducationCard title="Why Recycle?" text="Recycling is the most important thing you can do! Ever!"
       :handleClick="eduWhy" cardColor="yellow" :image="whyUrl" />
     <EducationCard title="How to Recycle?" text="Recycling is the most important thing you can do! Ever!"
@@ -49,12 +53,17 @@ export default {
 </script>
 
 <style scoped>
- .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    padding: 2rem;
-    gap: 1rem;
-  }
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+p {
+  font-family: "Nunito-Regular", sans-serif;
+}
 </style>

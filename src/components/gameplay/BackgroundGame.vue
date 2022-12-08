@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 img {
-    width: 100vw;
+    width: 100%
 }
 
 /* .backgroundContainer {

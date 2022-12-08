@@ -9,11 +9,16 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 </script>
 
 <template>
+  <ScoreVue :currentScore="score" class="topScore" />
+  <div class="blueBack">
+    <img class="pattern" src="/assets/backgrounds/trashpattern.svg" />
+  </div>
   <div class="gameContainer">
-    <ScoreVue :currentScore="score" class="topScore" />
-    <BackgroundGameVue ref="backgroundGame" />
+    <div class="skyArea">
+      <BackgroundGameVue ref="backgroundGame" />
+      <TimerVue class="timer" :finalScore="score" ref="timerVue" />
+    </div>
     <GameTrashMountain class="trashMountain" ref="gameTrashMountain" :setWrongNums="setWrongNums" :finalScore="score" />
-    <TimerVue class="timer" :finalScore="score" ref="timerVue" />
     <div class="grassArea">
       <div class="recycleBins__grid">
         <GameRecycleBinsVue v-for="bin in recycleBins" :binType="bin" :key="bin" :currentGarbage="currentGarbage"
@@ -76,6 +81,25 @@ export default {
 </script>
 
 <style scoped>
+.blueBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5AB4AB;
+  width: 100vw;
+  height: 100%;
+  opacity: 50%;
+}
+
+.pattern {
+  filter: invert(91%) sepia(16%) saturate(130%) hue-rotate(38deg) brightness(110%) contrast(95%);
+  opacity: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .topScore {
   position: fixed;
   z-index: 10;
@@ -88,13 +112,15 @@ export default {
 
 .timer {
   position: absolute;
-  top: 15%;
-  left: 35vw;
+  top: 36%;
+  left: 30%;
+  z-index: 1;
 }
 
 .gameContainer {
   background-color: #82CE9B;
   height: 100vh;
+  width: 390px;
   display: flex;
   flex-direction: column;
   align-items: center;

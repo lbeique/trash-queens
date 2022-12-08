@@ -118,8 +118,8 @@ export default {
 <style scoped>
 .base-timer {
   position: relative;
-  height: 30vw;
-  width: 30vw;
+  height: 140px;
+  width: 140px;
 }
 
 /* Removes SVG styling that would hide the time label */
@@ -140,8 +140,8 @@ export default {
   position: absolute;
 
   /* Size should match the parent container */
-  width: 30vw;
-  height: 30vw;
+  width: 140px;
+  height: 140px;
 
   /* Keep the label aligned to the top */
   top: 0;
