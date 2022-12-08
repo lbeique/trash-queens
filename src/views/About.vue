@@ -43,7 +43,7 @@ import Header from '../components/shared/Header.vue';
     </div>
     <div class="card__TM--content ">
       <div class="card__image">
-      <img src="https://images.unsplash.com/photo-1518478793609-e762ed795b6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Yasmina Photo">
+      <img src="/assets/profile-photos/yasmina-profile.avif" alt="Yasmina Photo">
         </div>
       <div>
         <h3>Yasmina Amirifar </h3>
@@ -54,13 +54,13 @@ import Header from '../components/shared/Header.vue';
       </div>
     </div>
     <div class="card__TM--content">
-      <img src="https://picsum.photos/seed/picsum/91/91" alt="Stefanie Photo">
+      <img src="/assets/profile-photos/stefanie-profile.jpg" alt="Stefanie Photo">
       <div>
         <h3>Stefanie Taswin</h3>
         <p>An aspiring full-stack web developer. Obsessed with coffee, games, and an explorer.</p>
         <div class="card__link">
-          <a href="#">social link </a>
-          <a href="#">social link</a>
+          <a href=" https://www.linkedin.com/in/callistef/ ">Linkedin</a>
+          <a href="#">callistastefanie@gmail.com </a>
         </div>
       </div>
     </div>
