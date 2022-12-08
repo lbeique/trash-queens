@@ -9,18 +9,22 @@ import GameTitle from '../components/home/GameTitle.vue';
 <template>
   <div class="center">
     <GameTitle />
-    <HeroImage />
-    <div class="cta">
-      <h2 class="cta__title">Join the Trash Queens</h2>
-      <Button text="Quick Play" variant="alternate" @click="startGame" />
-      <p class="cta__text">The power to save the world is at your fingertips.</p>
+    <div class="topSec">
+      <HeroImage />
+      <div class="cta">
+        <h2 class="cta__title">Join the Trash Queens</h2>
+        <Button text="Quick Play" variant="alternate" @click="startGame" />
+        <p class="cta__text">The power to save the world is at your fingertips.</p>
+      </div>
     </div>
-    <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText"
-      :buttonFunction="game" />
-    <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red"
-      :buttonText="resourceButtonText" :buttonFunction="education" />
-    <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText"
-      :buttonFunction="about" />
+    <div class="bottomCards">
+      <Card :text="gameText" :title="gameTitle" :image="gameImage" cardColor="yellow" :buttonText="gameButtonText"
+        :buttonFunction="game" />
+      <Card :text="resourceText" :title="resourceTitle" :image="resourceImage" cardColor="red"
+        :buttonText="resourceButtonText" :buttonFunction="education" />
+      <Card :text="aboutText" :title="aboutTitle" :image="aboutImage" cardColor="blue" :buttonText="aboutButtonText"
+        :buttonFunction="about" />
+    </div>
     <Scroll />
   </div>
 </template>
@@ -52,7 +56,7 @@ export default {
       gameButtonText: "The Game",
       resourceText: "Saving the world requires you to be vigilant. Learn real life skills to tackle the challenges around you!",
       resourceTitle: "Expand your Knowledge",
-      resourceImage:`/assets/recycling-bins/organic-bin.svg`,
+      resourceImage: `/assets/recycling-bins/organic-bin.svg`,
       resourceButtonText: "Learn More",
       aboutText: "Come and meet the awesome developers who designed and built this game!",
       aboutTitle: "Meat the Team",
@@ -79,6 +83,18 @@ export default {
   gap: 1rem;
 }
 
+.topSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cta {
   display: flex;
   flex-direction: column;
@@ -98,5 +114,19 @@ export default {
   font-size: 1.25rem;
   font-family: "Nunito-Bold", sans-serif;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* .topSec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bottomCards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  } */
 }
 </style>

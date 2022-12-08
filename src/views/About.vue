@@ -5,7 +5,7 @@ import Header from '../components/shared/Header.vue';
 </script>
 
 <template>
-  <Header title="About" >
+  <Header title="About">
 
     <template class="aboutIntro__content" v-slot:Desc>
       <p>We hope that you enjoy exploring our project as much as we enjoyed making it!</p>
@@ -15,15 +15,16 @@ import Header from '../components/shared/Header.vue';
   <div class=" card left--card">
     <div class="card__content">
       <h3> Vision </h3>
-     <p>We want to provide a quick and fun experience that you can share with others and educate them on how to properly dispose of their trash.
-     </p>
+      <p>We want to provide a quick and fun experience that you can share with others and educate them on how to
+        properly dispose of their trash.
+      </p>
     </div>
   </div>
 
   <div class=" card right--card">
     <div class="card__content">
       <h3> Trash Queens </h3>
-<!--      ADD TO THE TEXT-->
+      <!--      ADD TO THE TEXT-->
       <p>We are a team of....</p>
 
     </div>
@@ -31,20 +32,21 @@ import Header from '../components/shared/Header.vue';
 
   <div class=" card left--card team--card">
     <div class="card__TM--content ">
-      <img src="https://picsum.photos/seed/picsum/91/91" alt="Phoenix Photo">
+      <img src="/assets/profile-photos/phoenix-profile.png" alt="Phoenix Photo">
       <div>
         <h3>Phoenix Lai</h3>
-        <p>Full-stack web developer/ designer trying to create a better world, one less single use plastic at a time.</p>
+        <p>Full-stack web developer/ designer trying to create a better world, one less single use plastic at a time.
+        </p>
         <div class="card__link">
-          <a href="#">social link </a>
-          <a href="#">social link</a>
+          <a href="https://www.linkedin.com/in/phoenix-lai">LinkedIn</a>
+          <a href="https://github.com/phoenixlai833">GitHub</a>
         </div>
       </div>
     </div>
     <div class="card__TM--content ">
       <div class="card__image">
-      <img src="/assets/profile-photos/yasmina-profile.avif" alt="Yasmina Photo">
-        </div>
+        <img src="/assets/profile-photos/yasmina-profile.avif" alt="Yasmina Photo">
+      </div>
       <div>
         <h3>Yasmina Amirifar </h3>
         <p>A passionate web developer who enjoys creating entertaining and cool web apps. </p>
@@ -102,26 +104,26 @@ export default {
   padding: 2rem;
 }
 
-.card{
+.card {
   align-items: center;
   position: relative;
   width: 390px;
-  margin:1rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
   padding: 1rem;
-  color:#F5F9E9;
+  color: #F5F9E9;
   background-color: #5AB4AB;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
-.left--card{
+.left--card {
   transform: translateX(-2.5rem);
   border-radius: 8px;
   padding-left: 50px;
 }
 
-.right--card{
+.right--card {
   transform: translateX(2.5rem);
-  border-radius:  8px;
+  border-radius: 8px;
   padding-right: 50px;
 }
 
@@ -137,35 +139,35 @@ export default {
 
 /*TM stand for Team Member*/
 .card__TM--content {
-  display:flex;
-  gap:1.5rem;
-  margin-top:24px;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 24px;
   padding: .5rem;
 
 }
 
-.card__link{
-  display:flex;
-  gap:1rem;
+.card__link {
+  display: flex;
+  gap: 1rem;
 }
 
-a{
-  color: #F7C932 ;
+a {
+  color: #F7C932;
   font-family: "Nunito-Regular", sans-serif;
   font-size: 11px;
 }
 
-p{
+p {
   font-family: "Nunito-Regular", sans-serif;
 }
 
-.card p{
+.card p {
   font-size: 12px;
 }
 
-img{
-  width:91px;
-  height:91px;
+img {
+  width: 91px;
+  height: 91px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -177,12 +179,10 @@ h2 {
   font-size: 1.5rem;
 }
 
-h3{
+h3 {
   font-family: "FuzzyBubbles-Bold", sans-serif;
-  font-size: 18px ;
-  margin-bottom:5px;
+  font-size: 18px;
+  margin-bottom: 5px;
 
 }
-
-
 </style>
