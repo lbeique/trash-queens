@@ -61,19 +61,19 @@ import Header from '../components/shared/Header.vue';
         <h3>Stefanie Taswin</h3>
         <p>An aspiring full-stack web developer. Obsessed with coffee, games, and an explorer.</p>
         <div class="card__link">
-          <a href=" https://www.linkedin.com/in/callistef/ ">Linkedin</a>
-          <a href="#">callistastefanie@gmail.com </a>
+          <a href="https://www.linkedin.com/in/callistef/ ">LinkedIn</a>
+          <a href="mailto: callistastefanie@gmail.com">Email</a>
         </div>
       </div>
     </div>
     <div class="card__TM--content">
-      <img src="https://picsum.photos/seed/picsum/91/91" alt="Laurent Photo">
+      <img src="/assets/profile-photos/laurent-profile.avif" alt="Laurent Photo">
       <div>
         <h3>Laurent Beique </h3>
         <p>One part web developer and three parts self-critic all wrapped up in a meat Popsicle.</p>
         <div class="card__link">
-          <a href="#">social link </a>
-          <a href="#">social link</a>
+          <a href="https://www.linkedin.com/in/laurent-beique/">LinkedIn</a>
+          <a href="https://github.com/lbeique">GitHub</a>
         </div>
       </div>
     </div>
