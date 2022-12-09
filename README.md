@@ -7,22 +7,13 @@
 <p align="center"><img src="/public/assets/others/hero-image.svg" alt="trees"/></p>
 <br>
 <br>
-<h3>Still here?</h3>
-<br>
-<br>
-<h4>You just want to build this project in your own dev environment don't you...</h4>
-<br>
-<br>
-<h5>You don't want to play the game...</h5>
-<br>
-<br>
-<h2>To Setup the Project</h2>
+<h2>Setup the Dev Project</h2>
 
 ```sh
 npm install
 ```
 
-<h2>To Run the Project</h2>
+<h2>Run the Dev Project</h2>
 
 ```sh
 npm run dev
