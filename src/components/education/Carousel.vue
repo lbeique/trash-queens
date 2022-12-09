@@ -116,7 +116,7 @@ export default {
     align-items: center;
     width: 100%;
 }
-.slide-enter-active, .slide-leave-active {
+/* .slide-enter-active, .slide-leave-active {
     transition: transform 0.2s ease-in-out;
 }
 
@@ -130,7 +130,7 @@ export default {
 
 .slide-leave-to {
     transform: translateX(-400px);
-}
+} */
 
 
 </style>
