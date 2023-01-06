@@ -36,7 +36,7 @@ npm run dev
 
 <br>
 <div align="center">
-  <img src="https://github.com/lbeique/trash-queens/blob/master/public/assets/others/gameplay-video.gif?raw=true" alt="Prototype_Final_Video" width="200" height="400">
+  <img src="https://github.com/lbeique/trash-queens/blob/master/public/assets/others/gameplay-video.gif?raw=true" alt="Prototype_Final_Video" width="300" height="500">
 </div> 
 <br>
 
