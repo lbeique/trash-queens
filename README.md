@@ -38,7 +38,9 @@ npm run dev
 
 
 ## Team
-Laurent Beique
+[<div style="display:flex; align-items:center; justify-content: center;"><img alt="alt_text" width="40px" src="https://avatars.githubusercontent.com/u/82140797?v=4" />Laurent Beique</div>](https://github.com/lbeique/trash-queens)
+
+
 Phoenix Lai
 Yasmina Amirifar
 Callista Stefanie Taswin
