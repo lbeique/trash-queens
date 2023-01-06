@@ -6,6 +6,14 @@
     </div>
 </template>
 
+<!-- 
+    <br>
+<div align="center">
+  <img src="https://github.com/CalliStef/Callista-Lucia/blob/gh-pages/assets/images/13_prototype_mockup_complete_vid.gif?raw=true" alt="Prototype_Final_Video" width="400" height="200">
+</div> 
+<br>
+ -->
+
 <script>
 export default {
     name: 'GameTrashMountain',
