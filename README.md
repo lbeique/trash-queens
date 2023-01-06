@@ -33,6 +33,13 @@ npm run dev
 ```
 
 ### How to play(screenshots/screen record):
+
+<br>
+<div align="center">
+  <img src="https://github.com/lbeique/trash-queens/blob/master/public/assets/others/gameplay-video.gif?raw=true" alt="Prototype_Final_Video" width="400" height="800">
+</div> 
+<br>
+
 1. Press quick play to enter easy mode or select “The Game” to change to hard mode
 2. Drag the item into the correct recycling bin to gain a point. **If the bin in incorrect, the environment in the back will slowly deteriorate and a trash mountain will appear**
 3. Get as many correct while the timer counts down. **If you get 9 wrong, the game will end**
