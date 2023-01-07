@@ -11,9 +11,9 @@ We started this school project as a way for us to familiarize and improve our sk
 
 ## Challenges
 Throughout the whole project, we were faced with a multitude of challenges:
-- Creating our assets
-- Designing and planning the app
-- We had under one week to build the app
+- Creating all assets from scratch
+- Designing the frames and planning the user flow
+- Time constraint of under one week to build the app
 
 ## Instructions
 ### How to run the app:
