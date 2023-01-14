@@ -9,9 +9,10 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 </script>
 
 <template>
-    <ScoreVue :currentScore="score" class="topScore" />
+    <ScoreVue :currentScore="score" :livesLeft="lives" class="topScore" />
     <div class="blueBack">
-        <img class="pattern" src="/assets/backgrounds/trashpattern.svg" />
+        <div class="pattern"></div>
+        <!-- <img class="pattern" src="/assets/backgrounds/trashpattern.svg" /> -->
     </div>
     <div class="gameContainer">
         <div class="skyArea">
@@ -46,17 +47,19 @@ export default {
         },
         wrongDrop() {
             this.$refs.gameTrashMountain.moveMountainY()
-            console.log("ahhh", this.numWrong)
             this.$refs.backgroundGame.changeBack(this.numWrong)
         },
         setWrongNums(counter) {
             this.numWrong = counter
-            // console.log("this is in the gameplay", this.numWrong)
+            console.log("this is in the gameplay", this.numWrong)
         }
     },
     computed: {
         score() {
             return this.rounds - this.numWrong
+        },
+        lives() {
+            return 9 - this.numWrong
         }
     },
     props: {},
@@ -94,13 +97,24 @@ export default {
 }
 
 .pattern {
+    background-image: url("/assets/backgrounds/trashpattern.svg");
+    filter: invert(91%) sepia(16%) saturate(130%) hue-rotate(38deg) brightness(110%) contrast(95%);
+    opacity: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* .pattern {
     filter: invert(91%) sepia(16%) saturate(130%) hue-rotate(38deg) brightness(110%) contrast(95%);
     opacity: 50%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-}
+} */
 
 .topScore {
     position: fixed;
@@ -109,7 +123,7 @@ export default {
 
 .trashMountain {
     position: absolute;
-    top: 40%;
+    top: 300px;
 }
 
 .timer {

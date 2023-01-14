@@ -59,7 +59,7 @@ export default {
       resourceImage: `/assets/recycling-bins/organic-bin.svg`,
       resourceButtonText: "Learn More",
       aboutText: "Come and meet the awesome developers who designed and built this game!",
-      aboutTitle: "Meat the Team",
+      aboutTitle: "Meet the Team",
       aboutImage: `/assets/recycling-bins/metal-bin.svg`,
       aboutButtonText: "About Us",
     };

@@ -28,7 +28,6 @@ export default {
     },
     methods: {
         changeBack(n) {
-            console.log("wtf", n)
             if (n <= 3) {
                 this.backgroundUrl = `/assets/backgrounds/${this.backgrounds[0]}`
             } else if (3 < n < 7) {

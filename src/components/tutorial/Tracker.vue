@@ -1,7 +1,9 @@
 <template>
     <div class="tracker">
         <template v-for="(s, i) in totalPositions" :key="i">
-            <div class="tracker__dot" :class="variant ? {'tracker__dot--dark': trackerPosition == s} : {'tracker__dot--active': trackerPosition == s}" />
+            <div class="tracker__dot"
+                :class="variant ? { 'tracker__dot--dark': trackerPosition == s } : { 'tracker__dot--active': trackerPosition == s }" />
+            &nbsp;
         </template>
     </div>
 </template>

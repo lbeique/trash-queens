@@ -5,7 +5,26 @@ import Tracker from './Tracker.vue';
 
 <template>
     <div class="card">
-        <h1 class="card__title">Tutorial</h1>
+        <div class="placeholder"></div>
+        <div class="card__content">
+            <h1 class="card__title">Tutorial</h1>
+            <div class="card__content--left">
+                <img class="card__image" :src="imageSource" alt="image" />
+            </div>
+            <div class="card__content--right">
+                <h1 class="card__title_small">Tutorial</h1>
+                <p class="card__text">{{ text }}</p>
+                <div class="card__buttons">
+                    <Button :text="backText" variant="tutorial" @click="backClick" />
+                    <Button :text="forwardText" variant="tutorial" @click="forwardClick" />
+                </div>
+            </div>
+
+        </div>
+        <div class="card__tracker">
+            <Tracker :trackerPosition="currentStep" :totalPositions=3 />
+        </div>
+        <!-- <h1 class="card__title">Tutorial</h1>
         <div class="card__content">
             <img class="card__image" :src="imageSource" alt="image">
             <p class="card__text">{{ text }}</p>
@@ -16,7 +35,7 @@ import Tracker from './Tracker.vue';
         </div>
         <div class="card__tracker">
             <Tracker :trackerPosition="currentStep" :totalPositions=3 />
-        </div>
+        </div> -->
     </div>
 </template> 
 
@@ -74,28 +93,75 @@ export default {
     align-items: center;
     justify-content: space-between;
     background-color: #273D4E;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 3rem;
     border-radius: 20px;
 }
 
-.card__title {
+.card__title,
+.card__title_small {
     color: #F5F9E9;
     font-size: 1.5rem;
     font-family: "FuzzyBubbles-Bold", sans-serif;
 }
 
+.card__title_small {
+    display: none;
+}
+
 .card__content {
+    /* mobile */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     max-width: 230px;
 }
 
+.card__content--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* height: 100%; */
+}
+
+@media (min-width: 768px) {
+
+    .card__content {
+        flex-direction: row;
+        max-width: 900px;
+        gap: 3rem;
+    }
+
+    .card__title {
+        display: none;
+    }
+
+    .card__title_small {
+        display: block;
+    }
+
+    .card__content--right {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 300px;
+        width: 200px;
+        gap: 2rem;
+    }
+
+    .card__image {
+        max-height: 50vh;
+        min-height: 400px;
+    }
+
+}
+
+
 .card__image {
-    max-height: 130px;
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -104,6 +170,7 @@ export default {
     color: #F5F9E9;
     font-size: 1rem;
     font-family: "Nunito-Regular", sans-serif;
+    margin-bottom: 2rem;
 }
 
 .card__buttons {
@@ -118,5 +185,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
 }
 </style>

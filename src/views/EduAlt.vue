@@ -18,7 +18,6 @@ import Scroll from '../components/shared/Scroll.vue';
   </div>
   <div class="card column red">
     <div class="cardSub">
-      <!-- <img class="half" src="src/assets/education/altToRecycle-img2.jpg" alt="Image text" /> -->
       <div class="second"></div>
       <div class="space"></div>
       <div>
@@ -39,7 +38,6 @@ import Scroll from '../components/shared/Scroll.vue';
         take home!</p>
       <div class="space"></div>
       <div class="third"></div>
-      <!-- <img class="half" src="src/assets/education/altToRecycle-img3.jpg" alt="Image text" /> -->
     </div>
   </div>
   <div class="card blue">
@@ -55,7 +53,6 @@ import Scroll from '../components/shared/Scroll.vue';
         them instead!</p>
     </div>
     <div class="fourth"></div>
-    <!-- <img class="half" src="src/assets/education/altToRecycle-img4.jpg" alt="Image text" /> -->
   </div>
   <UserEngagement>
     <Scroll scrollColor="#F5F9E9" fontColor="#F5F9E9" />
@@ -142,7 +139,7 @@ export default {
 }
 
 .second {
-  background-image: url("src/assets/education/altToRecycle-img2.jpg");
+  background-image: url("/assets/education/altToRecycle-img2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -150,7 +147,7 @@ export default {
 }
 
 .third {
-  background-image: url("src/assets/education/altToRecycle-img3.jpg");
+  background-image: url("/assets/education/altToRecycle-img3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -158,7 +155,7 @@ export default {
 }
 
 .fourth {
-  background-image: url("src/assets/education/altToRecycle-img4.jpg");
+  background-image: url("/assets/education/altToRecycle-img4.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

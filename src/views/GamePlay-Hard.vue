@@ -9,7 +9,7 @@ import GameTrashMountain from "../components/gameplay/GameTrashMountain.vue"
 </script>
 
 <template>
-  <ScoreVue :currentScore="score" class="topScore" />
+  <ScoreVue :currentScore="score" :livesLeft="lives" class="topScore" />
   <div class="blueBack">
     <img class="pattern" src="/assets/backgrounds/trashpattern.svg" />
   </div>
@@ -55,6 +55,9 @@ export default {
   computed: {
     score() {
       return this.rounds - this.numWrong
+    },
+    lives() {
+      return 9 - this.numWrong
     }
   },
   props: {},
