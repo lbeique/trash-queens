@@ -24,8 +24,8 @@ import Header from '../components/shared/Header.vue';
   <div class=" card right--card">
     <div class="card__content">
       <h3> Trash Queens </h3>
-      <!--      ADD TO THE TEXT-->
-      <p>We are a team of....</p>
+      <p>We are a team of 4 full-stack web development students that care about the environment and love experimenting
+        with code!</p>
 
     </div>
   </div>
@@ -132,12 +132,8 @@ export default {
   width: 100%;
   padding: .5rem;
   gap: 1.5rem;
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: space-between;*/
 }
 
-/*TM stand for Team Member*/
 .card__TM--content {
   display: flex;
   gap: 1.5rem;

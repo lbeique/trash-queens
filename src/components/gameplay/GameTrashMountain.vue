@@ -20,7 +20,6 @@ export default {
     components: {},
     methods: {
         moveMountainY() {
-            console.log('move up')
             if (this.counter < 9) {
                 this.counter++
                 this.translateRem = this.translateRem - 1.3

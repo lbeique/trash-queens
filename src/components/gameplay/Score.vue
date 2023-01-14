@@ -3,7 +3,11 @@
     <div>
         <div class="scoreContainer">
             <GoBack :isGame=true />
-            <span>Score: {{ currentScore }}</span>
+            <div>
+                <span>Lives: {{ livesLeft }}</span>
+                &nbsp;&nbsp;
+                <span>Score: {{ currentScore }}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -12,7 +16,8 @@
 import GoBack from "../shared/GoBack.vue";
 export default {
     props: [
-        "currentScore"
+        "currentScore",
+        "livesLeft"
     ],
     components: { GoBack }
 };
@@ -23,7 +28,7 @@ export default {
     width: 100vw;
     min-height: 5vh;
     background-color: #F5F9E9;
-    border-radius: 0 0 10px 10px ;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: space-between;

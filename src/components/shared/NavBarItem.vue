@@ -8,7 +8,7 @@ import Iconify from './Iconify.vue';
     <div class="navbar-item">
         <RouterLink :to=navTo class="navbar-link">
             <Iconify :iconName=navIcon :iconColor=navColor :iconHeight=40 />
-            {{navName}}
+            {{ navName }}
         </RouterLink>
     </div>
 </template>
@@ -44,20 +44,20 @@ export default {
 </script>
 
 <style scoped>
-    /* .navbar-item {
+/* .navbar-item {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     } */
-    .navbar-link {
-        color: #F5F9E9;
-        font-size: 0.75rem;
-        font-family: "Nunito-Regular";
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+.navbar-link {
+    color: #F5F9E9;
+    font-size: 0.75rem;
+    font-family: "Nunito-Regular";
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 </style>
