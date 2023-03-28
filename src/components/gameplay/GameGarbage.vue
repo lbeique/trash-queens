@@ -49,7 +49,7 @@ export default {
                 },
                 {
                     garbageName: 'pizza',
-                    garbageCategory: 'organicx',
+                    garbageCategory: 'organics',
                     // garbageUrl: '/assets/garbages/trash-pizza.svg'
                 },
                 {
