@@ -70,7 +70,7 @@ import Header from '../components/shared/Header.vue';
       <img src="/assets/profile-photos/laurent-profile.avif" alt="Laurent Photo">
       <div>
         <h3>Laurent Beique </h3>
-        <p>One part web developer and three parts self-critic all wrapped up in a meat Popsicle.</p>
+        <p>Another full-stack web developer but with a passion for space!</p>
         <div class="card__link">
           <a href="https://www.linkedin.com/in/laurent-beique/">LinkedIn</a>
           <a href="https://github.com/lbeique">GitHub</a>
